@@ -1,0 +1,44 @@
+{%- extends "base.html" %}
+
+{%- block seo -%}
+  {{- super() }}
+
+  {%- set title = config.title %}
+  {%- if config.description %}
+    {%- set title_addition = title_separator ~ config.description %}
+  {%- else %}
+    {%- set title_addition = "" %}
+  {%- endif %}
+
+  {{- macros::seo(title=title, title_addition=title_addition, description=config.description, is_home=true) }}
+{%- endblock seo %}
+
+{%- macro recent(section_path, heading, more_url, limit) %}
+  {%- set sec = get_section(path=section_path) %}
+  {%- if sec.pages | length > 0 %}
+  <hr class="neon-divider">
+  <section class="recent">
+    <h2>{{ heading }}</h2>
+    <ul class="recent-list">
+      {%- for page in sec.pages | slice(end=limit) %}
+      <li>
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        <time class="smaller" datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%b %e, %Y") }}</time>
+      </li>
+      {%- endfor %}
+    </ul>
+    <a href="{{ get_url(path=more_url) | safe }}" class="read-more">All {{ heading }} --&gt;</a>
+  </section>
+  {%- endif %}
+{%- endmacro recent %}
+
+{%- block content %}
+{%- if section.content %}
+<div class="entry">
+  {{ section.content | safe }}
+</div>
+{%- endif %}
+
+{{ self::recent(section_path="writing/_index.md", heading="Writing", more_url="/writing", limit=5) }}
+{{ self::recent(section_path="til/_index.md", heading="TIL", more_url="/til", limit=5) }}
+{%- endblock %}
