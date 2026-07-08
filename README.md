@@ -1,7 +1,14 @@
-# simaojunior.com
+<p align="center">
+  <img src="static/images/sjr-logo.png" alt="Simão Júnior" width="240">
+</p>
 
-Personal website and blog. Static site built with [Zola](https://www.getzola.org/)
-and the [zola-hacker](https://www.getzola.org/themes/zola-hacker/) theme.
+<h1 align="center">simaojunior.com</h1>
+
+<p align="center">
+  Personal website and blog, built with
+  <a href="https://www.getzola.org/">Zola</a> and the
+  <a href="https://www.getzola.org/themes/zola-hacker/">zola-hacker</a> theme.
+</p>
 
 ## Development
 
