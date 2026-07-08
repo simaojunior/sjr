@@ -1,0 +1,75 @@
+# The URL the site will be built for
+base_url = "https://simaojunior.com"
+
+title = "Simão Júnior"
+description = "Software Engineer · backend · distributed systems · São Paulo"
+author = "Simão Júnior"
+
+theme = "hacker"
+
+# Compile the theme's Sass and (optionally) minify output HTML
+compile_sass = true
+minify_html = true
+
+# Generate an Atom feed (the "feed" social link points at it)
+generate_feeds = true
+
+# Build a search index (JSON) so search can be wired up later
+build_search_index = true
+
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+render_emoji = true
+bottom_footnotes = true
+
+[markdown.highlighting]
+enabled = true
+theme = "github-dark"
+
+[extra]
+title_separator = "·"
+language_code = "en-US"
+
+# Logo used for OpenGraph / JSON-LD images
+logo = "images/sjr-logo.png"
+
+# Navigation — mirrors the old simaojunior.com nav (Home / Writing / TIL) + CV
+menu = [
+  { url = "/", name = "Home" },
+  { url = "/writing", name = "Writing" },
+  { url = "/til", name = "TIL" },
+  { url = "/cv", name = "CV" },
+]
+
+# CV PDF for the download button in the cv() shortcode
+cv_file = "files/simao-junior-cv.pdf"
+
+# OpenGraph / Twitter card metadata
+opengraph = true
+
+timezone = "America/Sao_Paulo"
+
+# Disable the theme's "Improve this page" GitHub edit links for now
+edit_page = false
+
+# Use the built-in tag pages
+simplified_tags = false
+
+# Footer copyright starts here (see templates/partials/footer.html override)
+copyright_start_year = 2026
+
+# Footer social links
+social_links = [
+  { platform = "email", user_id = "simao.msjr@gmail.com" },
+  { platform = "github", user_id = "simaojunior" },
+  { platform = "feed", user_id = true },
+]
+
+# JSON-LD author metadata
+[extra.bio]
+job_title = "Software Engineer"
+links = [
+  "https://github.com/simaojunior",
+  "https://simaojunior.com",
+]
