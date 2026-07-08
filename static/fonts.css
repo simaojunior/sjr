@@ -1,0 +1,214 @@
+/* Arcade display fonts, self-hosted (mirrors the old simaojunior.com font system).
+   Press Start 2P  -> arcade pixel: site title + nav buttons (short display text)
+   VT323           -> retro terminal: subtitle + headings                        */
+
+/* ---- Press Start 2P (arcade pixel) ---- */
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/press-start-2p-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/press-start-2p-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ---- VT323 (retro terminal) ---- */
+@font-face {
+  font-family: "VT323";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/vt323-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "VT323";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/vt323-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  --font-arcade: "Press Start 2P", "VT323", "JetBrains Mono", monospace;
+  --font-terminal: "VT323", "JetBrains Mono", monospace;
+
+  /* Accent color — change these to recolor the whole site's highlight/glow */
+  --accent-rgb: 255, 191, 0;
+  --accent: rgb(var(--accent-rgb));
+  --accent-hover: rgb(255, 212, 81);
+}
+
+/* ---- Title: arcade pixel + amber neon glow ---- */
+header h1 {
+  font-family: var(--font-arcade);
+  font-size: clamp(0.9rem, 3.4vw, 1.25rem);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  /* the theme's -1px tracking is wrong for a pixel font */
+  color: var(--accent);
+  text-shadow:
+    0 0 4px rgba(var(--accent-rgb), 0.55),
+    0 0 12px rgba(var(--accent-rgb), 0.45),
+    0 0 24px rgba(var(--accent-rgb), 0.28),
+    0 1px 1px rgba(0, 0, 0, 0.4);
+  animation: title-neon 3.2s ease-in-out infinite;
+}
+header h1:before {
+  font-size: inherit;
+}
+
+@keyframes title-neon {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(var(--accent-rgb), 0.55),
+      0 0 12px rgba(var(--accent-rgb), 0.45),
+      0 0 24px rgba(var(--accent-rgb), 0.28),
+      0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(var(--accent-rgb), 0.7),
+      0 0 18px rgba(var(--accent-rgb), 0.55),
+      0 0 34px rgba(var(--accent-rgb), 0.38),
+      0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header h1,
+  header h2,
+  .recent h2 { animation: none; }
+}
+
+/* ---- Subtitle: retro terminal + amber neon glow (pulses with the title) ---- */
+header h2 {
+  font-family: var(--font-terminal);
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  text-shadow:
+    0 0 4px rgba(var(--accent-rgb), 0.5),
+    0 0 12px rgba(var(--accent-rgb), 0.4),
+    0 0 24px rgba(var(--accent-rgb), 0.25),
+    0 1px 1px rgba(0, 0, 0, 0.4);
+  animation: title-neon 3.2s ease-in-out infinite;
+}
+
+/* ---- Nav buttons: arcade pixel + amber neon glow ---- */
+#navbar .btn {
+  font-family: var(--font-arcade);
+  font-size: 0.58rem;
+  letter-spacing: 0.02em;
+  padding: 10px 16px;
+  color: var(--accent);
+  text-shadow:
+    0 0 4px rgba(var(--accent-rgb), 0.5),
+    0 0 11px rgba(var(--accent-rgb), 0.35);
+  transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+#navbar .btn:hover {
+  color: var(--accent-hover);
+  text-shadow:
+    0 0 6px rgba(var(--accent-rgb), 0.7),
+    0 0 16px rgba(var(--accent-rgb), 0.5),
+    0 0 28px rgba(var(--accent-rgb), 0.3);
+}
+
+/* ---- Content headings: retro terminal ---- */
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-family: var(--font-terminal);
+  letter-spacing: 0.02em;
+}
+/* VT323 has a small x-height; nudge heading sizes up so they keep presence */
+main h1 { font-size: 2.4rem; }
+main h2 { font-size: 1.9rem; }
+main h3 { font-size: 1.55rem; }
+
+/* Home body section headings ("Writing" / "TIL") get the amber neon glow too */
+.recent h2 {
+  color: var(--accent);
+  text-shadow:
+    0 0 4px rgba(var(--accent-rgb), 0.5),
+    0 0 12px rgba(var(--accent-rgb), 0.4),
+    0 0 24px rgba(var(--accent-rgb), 0.25),
+    0 1px 1px rgba(0, 0, 0, 0.4);
+  animation: title-neon 3.2s ease-in-out infinite;
+}
+
+/* Command-menu trigger keeps the arcade vibe too */
+#command-menu-trigger { font-family: var(--font-arcade); font-size: 0.55rem; }
+
+/* ---- Home neon divider ---- */
+.neon-divider {
+  border: 0;
+  height: 2px;
+  margin: 2.5rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--accent-rgb), 0.9) 20%,
+    rgba(var(--accent-rgb), 0.9) 80%,
+    transparent
+  );
+  box-shadow:
+    0 0 6px rgba(var(--accent-rgb), 0.6),
+    0 0 14px rgba(var(--accent-rgb), 0.4);
+  animation: divider-neon 3.2s ease-in-out infinite;
+}
+@keyframes divider-neon {
+  0%, 100% {
+    box-shadow:
+      0 0 6px rgba(var(--accent-rgb), 0.6),
+      0 0 14px rgba(var(--accent-rgb), 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 9px rgba(var(--accent-rgb), 0.8),
+      0 0 22px rgba(var(--accent-rgb), 0.5);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .neon-divider { animation: none; }
+}
+
+/* ---- Recolor the theme's amber ($amber) accent to var(--accent) ---- */
+/* Header divider (theme default) gets the same neon glow */
+header {
+  border-bottom-color: var(--accent);
+  box-shadow: 0 3px 12px -3px rgba(var(--accent-rgb), 0.55);
+  animation: header-neon 3.2s ease-in-out infinite;
+}
+@keyframes header-neon {
+  0%, 100% { box-shadow: 0 3px 12px -3px rgba(var(--accent-rgb), 0.55); }
+  50%      { box-shadow: 0 3px 19px -3px rgba(var(--accent-rgb), 0.78); }
+}
+@media (prefers-reduced-motion: reduce) {
+  header { animation: none; }
+}
+main :is(h1, h2, h3, h4, h5) { color: var(--accent); }
+main ul li::marker { color: var(--accent); }
+.page-info span { color: var(--accent); }
+hr { border-bottom-color: var(--accent); color: var(--accent); }
+th { border-bottom-color: var(--accent); }
+.pages > .page { border-bottom-color: var(--accent); }
