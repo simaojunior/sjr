@@ -13,23 +13,32 @@ zola serve         # preview at http://127.0.0.1:1111
 zola build         # output to ./public
 ```
 
-## Deploy (Cloudflare Pages, direct upload)
+## Deploy (Cloudflare Pages)
 
-`wrangler` is provided by the flake. Deploys upload the built `./public` directory
-straight to a Cloudflare Pages project — no Git/CI required.
+The site deploys to the `simaojunior` Cloudflare Pages project (direct upload).
+
+### Automatic (CI)
+
+`.github/workflows/deploy.yml` builds and deploys on every push to `main`. It
+needs two repository secrets (**Settings → Secrets and variables → Actions**):
+
+| Secret | Where to get it |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens → Create Token → *Cloudflare Pages: Edit* |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard URL, or Workers & Pages → right sidebar |
+
+### Manual (from your machine)
+
+`wrangler` is provided by the flake:
 
 ```sh
-wrangler login                                       # one-time, opens a browser
-zola build                                           # produce ./public
+wrangler login                                        # one-time, opens a browser
+zola build                                            # produce ./public
 wrangler pages deploy public --project-name simaojunior
 ```
 
-The first deploy creates the `simaojunior` project (choose `main` as the
-production branch when prompted). After it's live on `*.pages.dev`, attach the
-custom domain in the Cloudflare dashboard: **Workers & Pages → simaojunior →
-Custom domains → Set up a domain → `simaojunior.com`**. A domain can only be on
-one project, so remove it from the old project first (that project keeps serving
-until you switch).
+The custom domain is attached in the dashboard: **Workers & Pages → simaojunior →
+Custom domains → `simaojunior.com`**. A domain can only live on one project.
 
 ## Structure
 
