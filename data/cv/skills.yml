@@ -1,0 +1,17 @@
+- type: Languages & Backend
+  tools: [Node.js, JavaScript, TypeScript, Elixir, SQL, REST APIs, Git]
+
+- type: Databases
+  tools: [PostgreSQL, MongoDB, Redis, MySQL]
+
+- type: Messaging & Integrations
+  tools: [AWS SNS, AWS SQS, NATS.io, "External APIs (Serpro, Receita Federal)", Webhooks]
+
+- type: DevOps & Infrastructure
+  tools: [AWS, Docker, GitHub Actions, Portainer, CI/CD, N8N]
+
+- type: Automation & Tools
+  tools: [Technical RFCs, ADRs, Documentation, Mentoring]
+
+- type: Studying
+  tools: [System Design, Leadership, Microservices, Go]

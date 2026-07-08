@@ -1,0 +1,6 @@
+- Backend Software Engineer with 5+ years of experience developing critical, scalable systems operating in high-availability environments (~15 TPS and 40,000+ monthly transactions).
+- Proficient in Node.js, TypeScript, Elixir, PostgreSQL, MongoDB, Redis, AWS (S3, SNS, SQS, Cognito), NATS.io, N8N, and event-driven architectures.
+- Reduced operational costs by 40% through automation and process optimization using N8N.
+- Saved 80 hours/month by automating commercial reports integrated with internal systems.
+- Accelerated deployments by 80% (from 5 minutes to 1 minute) by implementing CI/CD pipelines via GitHub Actions, Docker, and Azure Container Registry (ACR).
+- Strong background in startup environments and lean teams, emphasizing a culture of ownership, technical leadership, documentation (RFCs, ADRs), and decisions driven by technical impact and product value. Solid experience designing and implementing distributed systems and microservices architectures to ensure scalability and resilience.

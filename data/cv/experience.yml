@@ -1,0 +1,44 @@
+- employer: Caveo
+  title: Senior Backend Software Engineer
+  location: Hybrid
+  start_date: 2026-01-01
+  end_date: 2026-05-01
+  responsibilities:
+  - Technically led the refactoring of a legacy system into a microservices and distributed systems architecture, focusing on optimizing the onboarding flow to support the company's goal of reaching 20,000 users.
+  - Designed and implemented an event-driven architecture (Fan-out pattern) using AWS SNS and SQS, ensuring asynchronous, resilient, and scalable communication between the BFF (Next.js) and the backend.
+
+- employer: Caveo
+  title: Backend Software Engineer (Mid-level III)
+  location: Hybrid
+  start_date: 2025-09-01
+  end_date: 2026-01-01
+  responsibilities:
+  - Developed backend services using Node.js, TypeScript, Koa.js, and PostgreSQL with TypeORM, AWS (SNS, SQS, Cognito, S3) ensuring high performance and code maintainability.
+  - Led the integration with business-critical external providers, implementing KYC flows via QItech and automating operational and sales pipelines via Pipefy and Pipedrive using N8N.
+
+- employer: Nextcode
+  title: Backend Software Engineer (Mid-level)
+  location: Remote
+  start_date: 2023-05-01
+  end_date: 2025-05-01
+  responsibilities:
+  - Architected and developed an Onboarding system featuring facial biometrics, OCR, CPF/RF (taxpayer ID) validation, and proof of life, processing over 40,000 monthly transactions (~15 TPS).
+  - Integrated with Serpro and Receita Federal APIs, increasing approval rates and reducing fraud.
+  - Implemented a biometric-based risk scoring system, significantly reducing chargebacks.
+  - Developed a WhatsApp notification service using NATS.io, integrated with company systems.
+  - Developed and maintained APIs using Node.js, TypeScript, Elixir, PostgreSQL, MongoDB, Redis, AWS, and NATS.io.
+  - Automated commercial reports and alerts with N8N, saving 80 hours/month and ensuring 100% SLA compliance—directly resulting in a 40% reduction in operational costs and improving commercial team efficiency.
+  - Developed a Flutter mobile application for creating private events with identity validation and KYC functionalities.
+  - Mentored interns, providing technical support and leadership on internal projects.
+  - Created CI/CD pipelines with GitHub Actions, accelerating deployments from 5 minutes to 1 minute and eliminating manual tasks.
+  - Introduced an RFC process for technical decisions, promoting a culture of documentation and alignment.
+
+- employer: Nextcode
+  title: Backend Software Engineer (Junior)
+  location: Remote
+  start_date: 2021-08-01
+  end_date: 2023-05-01
+  responsibilities:
+  - Created documentation for company APIs.
+  - Evolved legacy solutions by applying clean code best practices and automated testing.
+  - Created RESTful APIs using Node.js/Fastify, TypeScript, and MongoDB.
