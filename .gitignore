@@ -1,0 +1,8 @@
+# Zola build output
+/public
+
+# direnv / nix
+.direnv
+
+# OS junk
+.DS_Store
