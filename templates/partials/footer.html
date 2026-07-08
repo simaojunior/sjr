@@ -1,0 +1,12 @@
+{%- include "partials/svg-icons.html" -%}
+{%- if page.extra.pgp_key_enabled and config.extra.pgp_key %}
+<p class="pgp-key">
+  <a href="{{ config.extra.pgp_key.url }}">PGP:
+    <code>{{ config.extra.pgp_key.fingerprint }}</code>
+  </a>
+</p>
+{%- endif -%}
+{%- set current_year = now() | date(format="%Y") | int -%}
+{%- set start_year = config.extra.copyright_start_year | default(value=current_year) -%}
+<span class="copyright">&copy; {{ start_year }}{% if start_year != current_year %} - {{ current_year }}{% endif %} {{ config.author }}</span>
+{%- include "partials/command-menu.html" -%}

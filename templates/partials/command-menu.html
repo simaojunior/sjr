@@ -1,0 +1,201 @@
+{#- Command palette (vim-style navigation), mirrors the old simaojunior.com ⌘P menu -#}
+{%- set socials = load_data(path="data/socials.yml") -%}
+
+<button id="command-menu-trigger" type="button" aria-label="Open command menu">
+  <span>Press</span><kbd>⌘ P</kbd>
+</button>
+
+<script id="command-menu-data" type="application/json">
+[
+{%- for item in config.extra.menu %}{% if not loop.first %},{% endif %}
+  {"label": {{ item.name | json_encode | safe }}, "url": {{ get_url(path=item.url) | json_encode | safe }}, "external": false}
+{%- endfor %}
+{%- for link in config.extra.social_links %}{% if link.user_id %},
+  {%- if link.platform == "github" %}{% set label = "GitHub" %}
+  {%- elif link.platform == "email" %}{% set label = "Email" %}
+  {%- elif link.platform == "feed" %}{% set label = "RSS Feed" %}
+  {%- elif link.platform == "linkedin" %}{% set label = "LinkedIn" %}
+  {%- else %}{% set label = link.platform | capitalize %}{% endif %}
+  {%- set social = socials | filter(attribute="platform", value=link.platform) | first %}
+  {%- if link.platform == "feed" %}{% set href = get_url(path="atom.xml") %}{% else %}{% set href = social.url ~ link.user_id %}{% endif %}
+  {"label": {{ label | json_encode | safe }}, "url": {{ href | json_encode | safe }}, "external": true}
+{%- endif %}{% endfor %}
+]
+</script>
+
+<style>
+  #command-menu-trigger {
+    position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 40;
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .4rem .7rem; cursor: pointer;
+    font-family: "JetBrains Mono", monospace; font-size: .78rem;
+    color: #999; background: #1b1b1b;
+    border: 1px solid #333; border-radius: 6px;
+  }
+  #command-menu-trigger:hover { color: #eaeaea; border-color: #505050; }
+  #command-menu-trigger kbd {
+    padding: .1rem .35rem; background: #242424;
+    border: 1px solid #3a3a3a; border-radius: 4px; font-size: .7rem;
+  }
+  @media (max-width: 640px) { #command-menu-trigger { display: none; } }
+
+  .cmd-overlay {
+    position: fixed; inset: 0; z-index: 50;
+    background: rgba(0, 0, 0, .6);
+  }
+  .cmd-overlay[hidden] { display: none; }
+  .cmd-panel {
+    width: min(92vw, 520px); margin: 12vh auto 0;
+    background: #151515; border: 1px solid #333; border-radius: 8px;
+    overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+  }
+  .cmd-input {
+    width: 100%; box-sizing: border-box; padding: .85rem 1rem;
+    background: transparent; border: 0; border-bottom: 1px solid #333;
+    color: #eaeaea; font-family: "JetBrains Mono", monospace; font-size: .9rem;
+    outline: none;
+  }
+  .cmd-input::placeholder { color: #666; }
+  .cmd-list {
+    list-style: none; margin: 0; padding: .35rem;
+    max-height: min(50vh, 360px); overflow-y: auto;
+  }
+  .cmd-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .55rem .75rem; border-radius: 5px; cursor: pointer;
+    color: #eaeaea; font-family: "JetBrains Mono", monospace; font-size: .85rem;
+  }
+  .cmd-item.is-selected { background: #242424; color: #ffbf00; }
+  .cmd-ext { color: #666; font-size: .75rem; }
+  .cmd-empty {
+    padding: 1.25rem; text-align: center; color: #666;
+    font-family: "JetBrains Mono", monospace; font-size: .85rem;
+  }
+  .cmd-footer {
+    display: flex; justify-content: space-between; gap: 1rem;
+    padding: .5rem .85rem; border-top: 1px solid #333;
+    color: #777; font-family: "JetBrains Mono", monospace; font-size: .7rem;
+  }
+  .cmd-footer kbd {
+    display: inline-block; padding: .05rem .3rem; margin: 0 .1rem;
+    background: #242424; border: 1px solid #3a3a3a; border-radius: 3px; font-size: .65rem;
+  }
+</style>
+
+<script>
+  (function () {
+    var dataEl = document.getElementById("command-menu-data");
+    if (!dataEl) return;
+    var items = JSON.parse(dataEl.textContent);
+
+    var overlay = document.createElement("div");
+    overlay.className = "cmd-overlay";
+    overlay.hidden = true;
+    overlay.innerHTML =
+      '<div class="cmd-panel" role="dialog" aria-modal="true" aria-label="Command menu">' +
+      '<input class="cmd-input" type="text" placeholder="Type to search..." autocomplete="off" spellcheck="false" aria-label="Search" />' +
+      '<ul class="cmd-list" role="listbox"></ul>' +
+      '<div class="cmd-footer"><span>ESC to close</span>' +
+      '<span><kbd>^J</kbd><kbd>^K</kbd> navigate &middot; <kbd>&crarr;</kbd> open</span></div>' +
+      "</div>";
+    document.body.appendChild(overlay);
+
+    var input = overlay.querySelector(".cmd-input");
+    var list = overlay.querySelector(".cmd-list");
+    var selected = 0;
+    var filtered = items.slice();
+
+    function esc(s) {
+      return s.replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function render() {
+      list.innerHTML = "";
+      if (filtered.length === 0) {
+        var empty = document.createElement("li");
+        empty.className = "cmd-empty";
+        empty.textContent = "No results";
+        list.appendChild(empty);
+        return;
+      }
+      filtered.forEach(function (it, i) {
+        var li = document.createElement("li");
+        li.className = "cmd-item" + (i === selected ? " is-selected" : "");
+        li.setAttribute("role", "option");
+        li.innerHTML =
+          '<span class="cmd-label">' + esc(it.label) + "</span>" +
+          (it.external ? '<span class="cmd-ext">&#8599;</span>' : "");
+        li.addEventListener("click", function () { activate(i); });
+        li.addEventListener("mousemove", function () {
+          if (selected !== i) { selected = i; updateSel(); }
+        });
+        list.appendChild(li);
+      });
+    }
+    function updateSel() {
+      var children = list.children;
+      for (var i = 0; i < children.length; i++) {
+        children[i].classList.toggle("is-selected", i === selected);
+      }
+      var el = children[selected];
+      if (el && el.scrollIntoView) el.scrollIntoView({ block: "nearest" });
+    }
+    function filter() {
+      var q = input.value.trim().toLowerCase();
+      filtered = items.filter(function (it) {
+        return it.label.toLowerCase().indexOf(q) !== -1;
+      });
+      selected = 0;
+      render();
+    }
+    function open() {
+      overlay.hidden = false;
+      document.body.style.overflow = "hidden";
+      input.value = "";
+      filter();
+      input.focus();
+    }
+    function close() {
+      overlay.hidden = true;
+      document.body.style.overflow = "";
+    }
+    function activate(i) {
+      var it = filtered[i];
+      if (!it) return;
+      close();
+      if (it.external) window.open(it.url, "_blank", "noopener");
+      else window.location.href = it.url;
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if ((e.metaKey || e.ctrlKey) && (e.key === "p" || e.key === "P")) {
+        e.preventDefault();
+        if (overlay.hidden) open(); else close();
+      } else if (e.key === "Escape" && !overlay.hidden) {
+        close();
+      }
+    });
+    input.addEventListener("keydown", function (e) {
+      var down = (e.ctrlKey && (e.key === "j" || e.key === "J")) || e.key === "ArrowDown";
+      var up = (e.ctrlKey && (e.key === "k" || e.key === "K")) || e.key === "ArrowUp";
+      if (down) {
+        e.preventDefault();
+        if (filtered.length) { selected = (selected + 1) % filtered.length; updateSel(); }
+      } else if (up) {
+        e.preventDefault();
+        if (filtered.length) { selected = (selected - 1 + filtered.length) % filtered.length; updateSel(); }
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        activate(selected);
+      }
+    });
+    input.addEventListener("input", filter);
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) close();
+    });
+
+    var trigger = document.getElementById("command-menu-trigger");
+    if (trigger) trigger.addEventListener("click", open);
+  })();
+</script>
