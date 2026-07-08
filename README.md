@@ -19,8 +19,11 @@ The site deploys to the `simaojunior` Cloudflare Pages project (direct upload).
 
 ### Automatic (CI)
 
-`.github/workflows/deploy.yml` builds and deploys on every push to `main`. It
-needs two repository secrets (**Settings → Secrets and variables → Actions**):
+`.github/workflows/deploy.yml` runs `zola build` on every push and pull request;
+a broken build fails the check and **blocks the deploy**. On `main` (and manual
+runs) it then deploys the built site. Pull requests only run the build check.
+
+It needs two repository secrets (**Settings → Secrets and variables → Actions**):
 
 | Secret | Where to get it |
 | --- | --- |
