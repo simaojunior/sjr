@@ -1,5 +1,0 @@
-<nav id="navbar">
-  {%- for item in config.extra.menu %}
-  <a href="{{ get_url(path=item.url) | safe }}" class="btn">{{ item.name }}</a>
-  {%- endfor %}
-</nav>
