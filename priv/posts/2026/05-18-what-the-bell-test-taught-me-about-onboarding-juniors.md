@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "What the bell test taught me about onboarding juniors",
   author: "Simão Júnior",
   tags: ["placeholder"],

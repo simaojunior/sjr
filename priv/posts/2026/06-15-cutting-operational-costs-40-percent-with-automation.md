@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "Cutting operational costs 40% with automation",
   author: "Simão Júnior",
   tags: ["career", "automation"],

@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "Hello, world",
   author: "Simão Júnior",
   tags: ["meta"],

@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "Idempotency keys are a data model, not a header",
   author: "Simão Júnior",
   tags: ["placeholder"],

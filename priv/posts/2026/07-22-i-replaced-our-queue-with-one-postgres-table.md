@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "I replaced our queue with one Postgres table",
   author: "Simão Júnior",
   tags: ["placeholder"],

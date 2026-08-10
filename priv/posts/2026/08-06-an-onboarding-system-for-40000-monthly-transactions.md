@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "An onboarding system for 40,000 monthly transactions",
   author: "Simão Júnior",
   tags: ["career", "architecture"],

@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "Zola reads both config.toml and zola.toml",
   author: "Simão Júnior",
   tags: ["til", "zola"],

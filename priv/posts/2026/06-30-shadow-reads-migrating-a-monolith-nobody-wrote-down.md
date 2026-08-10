@@ -1,4 +1,5 @@
 %{
+  draft: true,
   title: "Shadow reads: migrating a monolith nobody wrote down",
   author: "Simão Júnior",
   tags: ["placeholder"],
