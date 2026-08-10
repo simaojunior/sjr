@@ -13,11 +13,7 @@ config :sjr, SjrWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "oAr/9e0gOaRuKdS2Q83vffkhqKuYgWglH0aCEOnWI9tiFHsu7p1m5jEpNFdnG8rA",
-  watchers: [
-    esbuild: {Esbuild, :install_and_run, [:sjr, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:sjr, ~w(--watch)]}
-  ]
+  secret_key_base: "oAr/9e0gOaRuKdS2Q83vffkhqKuYgWglH0aCEOnWI9tiFHsu7p1m5jEpNFdnG8rA"
 
 # ## SSL Support
 #
