@@ -7,10 +7,20 @@
   description: "Automating commercial reports and alerts with N8N saved 80 hours a month and kept SLA compliance at 100%."
 }
 ---
-The commercial team was assembling reports and alerts by hand every week.
-It was slow, error-prone, and nobody enjoyed it.
+Commercial reports and alerts were assembled by hand every week. It ate a
+full day of someone's time, and it still missed things when a system went
+quiet without anyone noticing until a customer complained.
 
-I automated the whole flow with N8N: reports, alerts, and the handoffs
-between systems that used to require someone to notice and act. That saved
-about 80 hours a month, kept SLA compliance at 100%, and cut operational
-costs by roughly 40%.
+The automation had to cover reporting and alerting without losing the
+judgment calls a person had been making along the way, since a handful of
+those manual checks existed precisely because the raw data was not
+trustworthy on its own.
+
+I rebuilt the flow in N8N, connecting reporting and alerting directly to
+the internal systems that used to require someone to notice a problem and
+act on it manually. Where a judgment call mattered, I encoded the
+condition that used to trigger it rather than removing the check.
+
+The change saved about 80 hours a month, kept SLA compliance at 100
+percent, and cut operational costs by roughly 40 percent. The commercial
+team got its time back to work the numbers instead of collecting them.

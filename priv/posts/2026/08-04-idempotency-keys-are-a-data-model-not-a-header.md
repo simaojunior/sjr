@@ -11,5 +11,17 @@
 > real write-up when ready; the title, rank, and teaser above are already
 > wired into the mission log on the homepage.
 
-Every retry bug I've debugged came down to storing the wrong thing. What to
-persist, and when.
+A payment retry landed twice in production. The idempotency key that was
+supposed to prevent it turned out to live in a request header, which meant
+it vanished the moment the client retried with a slightly different one.
+
+The question was what actually needed to persist to make a retry safe,
+rather than patching the one check that happened to cover the bug report
+in front of us.
+
+I moved the key off the transport layer entirely and modeled it as a
+record tied to the operation it protected, with its own lifecycle and
+expiry, instead of trusting whatever the client happened to send along.
+
+Retries stopped duplicating, and the fix generalized to every endpoint
+that touched money, not just the one that had broken.
