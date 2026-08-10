@@ -1,5 +1,5 @@
 %{
-  draft: true,
+  draft: false,
   title: "Quickly Inspect package.json Scripts",
   author: "Simão Júnior",
   tags: ["til", "fish", "nushell", "shell", "json"],
