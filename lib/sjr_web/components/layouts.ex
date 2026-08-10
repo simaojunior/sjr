@@ -126,7 +126,7 @@ defmodule SjrWeb.Layouts do
   @doc "The site footer: badges, social links, shinobi number. Shared across pages."
   def site_footer(assigns) do
     ~H"""
-    <div style="margin-top:56px;padding-top:20px;border-top:1px solid var(--color-neutral-800);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end;">
+    <div style="margin-top:56px;padding-top:20px;border-top:1px solid var(--color-neutral-800);display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end;">
       <div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
           <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-chakra);text-align:center;">
@@ -139,14 +139,14 @@ defmodule SjrWeb.Layouts do
             TEAM 7<br />FOREVER
           </span>
           <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-neutral-400);text-align:center;">
-            BEST VIEWED<br />IN ANY BROWSER
+            BEST VIEWED<br />ANY BROWSER
           </span>
         </div>
         <div style="display:flex;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;flex-wrap:wrap;">
           <a href="https://github.com/simaojunior">github</a><a href="#">bluesky</a><a href="#">linkedin</a><a href="#">rss</a><a href="mailto:simao.msjr@gmail.com">email</a>
         </div>
       </div>
-      <div style="text-align:right;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);line-height:1.9;">
+      <div style="margin-left:auto;text-align:right;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);line-height:1.9;">
         <div>
           you are shinobi no.
           <span
