@@ -1,15 +1,15 @@
 defmodule Mix.Tasks.Assets.Copy do
+  @shortdoc "Copies assets/ into priv/static/assets/"
+
   @moduledoc """
   Copies the hand-authored CSS/JS in `assets/` to `priv/static/assets/`.
 
-  The Nocturne design system ships as finished CSS with no build step, and
-  the only JS is a small theme-toggle script — so there's nothing to bundle
-  or compile, just files to place where `Plug.Static` and `phx.digest` can
-  find them.
+  The design ships as finished CSS with no build step, and the only JS is
+  a small theme-toggle script — so there's nothing to bundle or compile,
+  just files to place where `Plug.Static` and `phx.digest` can find them.
   """
-  use Mix.Task
 
-  @shortdoc "Copies assets/ into priv/static/assets/"
+  use Mix.Task
 
   @impl Mix.Task
   def run(_args) do

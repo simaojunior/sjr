@@ -52,7 +52,9 @@ defmodule Sjr.MixProject do
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
       {:nimble_publisher, "~> 2.0"},
-      {:mdex, "~> 0.12"}
+      {:mdex, "~> 0.12"},
+      {:lumis, "~> 0.6.0"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -67,7 +69,13 @@ defmodule Sjr.MixProject do
       setup: ["deps.get", "assets.build"],
       "assets.build": ["compile", "assets.copy"],
       "assets.deploy": ["assets.copy", "phx.digest"],
-      precommit: ["compile --warnings-as-errors", "deps.unlock --unused", "format", "test"]
+      precommit: [
+        "compile --warnings-as-errors",
+        "deps.unlock --unused",
+        "format",
+        "test",
+        "credo --strict"
+      ]
     ]
   end
 end
