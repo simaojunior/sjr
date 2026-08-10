@@ -172,6 +172,7 @@ a:hover { color: var(--color-accent-200); text-decoration: underline; }
 
 .theme-toggle-btn:hover { color: var(--color-accent); border-color: var(--color-accent-700); }
 .mission-row:hover { background: var(--color-neutral-900); }
+a.card:hover { box-shadow: var(--shadow-md); text-decoration: none; }
 
 @keyframes blink { 50% { opacity: 0.15; } }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
