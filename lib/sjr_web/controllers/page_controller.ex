@@ -9,4 +9,8 @@ defmodule SjrWeb.PageController do
       total_posts: length(Blog.all_posts())
     )
   end
+
+  def uses(conn, _params) do
+    render(conn, :uses, page_title: "Uses")
+  end
 end

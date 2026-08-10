@@ -109,8 +109,7 @@ defmodule SjrWeb.Layouts do
         <a href="/#writing">[scrolls]</a>
         <a href="/#projects">[bingo book]</a>
         <a href="/#about">[about]</a>
-        <a href="#">[uses]</a>
-        <a href="#">[guestbook]</a>
+        <a href="/uses">[uses]</a>
         <button
           type="button"
           data-theme-toggle
