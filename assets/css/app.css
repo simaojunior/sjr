@@ -171,7 +171,11 @@ a { color: var(--color-accent-300); text-decoration: none; }
 a:hover { color: var(--color-accent-200); text-decoration: underline; }
 
 .theme-toggle-btn:hover { color: var(--color-accent); border-color: var(--color-accent-700); }
-.mission-row:hover { background: var(--color-neutral-900); }
+.mission-row { transition: background 0.15s ease; }
+.mission-row:hover { background: var(--color-neutral-900); text-decoration: none; }
+.mission-row:active { background: var(--color-neutral-800); }
+
+@view-transition { navigation: auto; }
 a.card:hover { box-shadow: var(--shadow-md); text-decoration: none; }
 
 @keyframes blink { 50% { opacity: 0.15; } }
