@@ -14,7 +14,8 @@ defmodule Sjr.Blog.Post do
     :rank,
     :icon,
     :last_modified,
-    :text_content
+    :text_content,
+    draft: false
   ]
 
   def build(filename, attrs, body) do

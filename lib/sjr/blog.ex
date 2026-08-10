@@ -23,15 +23,19 @@ defmodule Sjr.Blog do
   def all_posts, do: @posts
   def all_tags, do: @tags
 
+  @doc "Posts visible on the home page and /scrolls listing — drafts excluded."
+  def published_posts, do: Enum.reject(all_posts(), & &1.draft)
+
   def posts_by_tag(tag) do
-    Enum.filter(all_posts(), fn post -> tag in post.tags end)
+    Enum.filter(published_posts(), fn post -> tag in post.tags end)
   end
 
+  @doc "Finds a post by id regardless of draft status, so preview links still work."
   def find_by_id(id) do
     Enum.find(all_posts(), fn post -> post.id == id end)
   end
 
-  def recent_posts(limit \\ 4), do: Enum.take(all_posts(), limit)
+  def recent_posts(limit \\ 4), do: Enum.take(published_posts(), limit)
 
   @words_per_minute 200
 
