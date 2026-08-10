@@ -1,25 +1,6 @@
 <div style="min-height:100%;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);padding:0 20px 64px;">
   <div style="max-width:1060px;margin:0 auto;">
-    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:20px 0 12px;border-bottom:1px solid var(--color-neutral-800);flex-wrap:wrap;">
-      <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:19px;letter-spacing:-0.02em;color:var(--color-neutral-100);">simaojunior<span style="color:var(--color-accent);">.dev</span></span>
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);">hidden leaf branch office · est. 2019</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;flex-wrap:wrap;white-space:nowrap;">
-        <a href="/" style="color:var(--color-neutral-100);">[home]</a>
-        <a href="#writing">[scrolls]</a>
-        <a href="#projects">[bingo book]</a>
-        <a href="#about">[about]</a>
-        <a href="#">[uses]</a>
-        <a href="#">[guestbook]</a>
-        <button
-          type="button"
-          data-theme-toggle
-          class="theme-toggle-btn"
-          style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:var(--color-neutral-400);border:1px solid var(--color-neutral-700);border-radius:var(--radius-sm);padding:5px 9px;cursor:pointer;"
-        >☾ dark</button>
-      </div>
-    </div>
+    <Layouts.site_nav />
 
     <div style="margin-top:12px;background:var(--color-accent-900);border:1px solid var(--color-accent-800);border-radius:var(--radius-sm);overflow:hidden;display:flex;align-items:center;">
       <div style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-right:1px solid var(--color-accent-800);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;color:var(--color-accent-300);flex:none;">
@@ -116,7 +97,7 @@
 
       <a
         :for={post <- @posts}
-        href="#"
+        href={~p"/posts/#{post.id}"}
         class="mission-row"
         style="display:grid;grid-template-columns:auto minmax(220px,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;"
       >
@@ -264,28 +245,6 @@
       </div>
     </div>
 
-    <div style="margin-top:56px;padding-top:20px;border-top:1px solid var(--color-neutral-800);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end;">
-      <div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
-          <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-chakra);text-align:center;">HAND CODED<br />NO BUILD STEP</span>
-          <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-neutral-400);text-align:center;">RSS<br />YES REALLY</span>
-          <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-neutral-400);text-align:center;">TEAM 7<br />FOREVER</span>
-          <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-neutral-400);text-align:center;">BEST VIEWED<br />IN ANY BROWSER</span>
-        </div>
-        <div style="display:flex;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;flex-wrap:wrap;">
-          <a href="https://github.com/simaojunior">github</a><a href="#">bluesky</a><a href="#">linkedin</a><a href="#">rss</a><a href="mailto:simao.msjr@gmail.com">email</a>
-        </div>
-      </div>
-      <div style="text-align:right;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);line-height:1.9;">
-        <div>
-          you are shinobi no.
-          <span style="display:inline-block;padding:2px 6px;background:var(--color-neutral-900);border:1px solid var(--color-neutral-800);color:var(--color-chakra);letter-spacing:0.22em;">0042871</span>
-        </div>
-        <div>
-          member of the <a href="#">webring</a> · <a href="#">← prev</a> · <a href="#">next →</a>
-        </div>
-        <div>© {current_year()} Simão Júnior · no cookies, no trackers, no popups</div>
-      </div>
-    </div>
+    <Layouts.site_footer />
   </div>
 </div>
