@@ -107,6 +107,7 @@ defmodule SjrWeb.Layouts do
       <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;flex-wrap:wrap;white-space:nowrap;">
         <a href="/" style="color:var(--color-neutral-100);">[home]</a>
         <a href="/#writing">[scrolls]</a>
+        <a href="/til">[til]</a>
         <a href="/#projects">[bingo book]</a>
         <a href="/#about">[about]</a>
         <a href="/uses">[uses]</a>

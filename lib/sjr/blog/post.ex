@@ -15,7 +15,8 @@ defmodule Sjr.Blog.Post do
     :icon,
     :last_modified,
     :text_content,
-    draft: false
+    draft: false,
+    featured: false
   ]
 
   def build(filename, attrs, body) do

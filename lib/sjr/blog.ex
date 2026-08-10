@@ -26,8 +26,11 @@ defmodule Sjr.Blog do
   @doc "Posts visible on the home page and /scrolls listing — drafts excluded."
   def published_posts, do: Enum.reject(all_posts(), & &1.draft)
 
-  @doc "Draft posts, shown as coming-soon placeholders on the home page."
-  def draft_posts, do: Enum.filter(all_posts(), & &1.draft)
+  @doc "Published long-form posts for the mission log — til posts live on /til instead."
+  def scroll_posts, do: Enum.reject(published_posts(), &("til" in &1.tags))
+
+  @doc "Featured draft posts, shown as coming-soon placeholders on the home page."
+  def draft_posts, do: Enum.filter(all_posts(), &(&1.draft && &1.featured))
 
   def posts_by_tag(tag) do
     Enum.filter(published_posts(), fn post -> tag in post.tags end)
@@ -38,7 +41,7 @@ defmodule Sjr.Blog do
     Enum.find(all_posts(), fn post -> post.id == id end)
   end
 
-  def recent_posts(limit \\ 4), do: Enum.take(published_posts(), limit)
+  def recent_posts(limit \\ 4), do: Enum.take(scroll_posts(), limit)
 
   @words_per_minute 200
 

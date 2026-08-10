@@ -19,6 +19,7 @@ defmodule SjrWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/til", PageController, :til
     get "/uses", PageController, :uses
     get "/posts/:id", BlogController, :show
   end
