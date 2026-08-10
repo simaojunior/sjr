@@ -238,3 +238,367 @@ a.card:hover { box-shadow: var(--shadow-md); text-decoration: none; }
   border-radius: var(--radius-md); padding: 14px 16px; overflow-x: auto; margin: 0 0 1.2em;
 }
 .post-body pre code { background: none; padding: 0; }
+.code-wrapper { position: relative; }
+.code-wrapper .copy-btn {
+  position: absolute; top: 10px; right: 10px; display: flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; padding: 0; background: var(--color-bg); color: var(--color-neutral-500);
+  border: 1px solid var(--color-neutral-800); border-radius: var(--radius-sm); cursor: pointer;
+  opacity: 0; transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+}
+.code-wrapper:hover .copy-btn, .code-wrapper .copy-btn:focus-visible { opacity: 1; }
+.code-wrapper .copy-btn:hover { color: var(--color-chakra); border-color: var(--color-neutral-700); }
+.code-wrapper .copy-btn.copied { opacity: 1; color: var(--color-leaf-light); border-color: var(--color-leaf-light); }
+
+
+/*
+ * Syntax highlighting for post code blocks (Gruvbox Dark Hard, via Lumis).
+ * Regenerate with:
+ *   Lumis.Theme.build_css!("gruvbox_dark_hard", scope: ".post-body", container_style: [{"background-color", "transparent"}, {"border", "none"}, {"padding", "0"}])
+ */
+/* gruvbox_dark_hard
+ * revision: 154eb5ff5b96d0641307113fa385eaf0d36d9796
+ */
+.post-body .lumis {
+  color: #ebdbb2;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.post-body .l-attribute {
+  color: #8ec07c;
+}
+.post-body .l-attribute-builtin {
+  color: #fe8019;
+}
+.post-body .l-boolean {
+  color: #d3869b;
+}
+.post-body .l-character {
+  color: #d3869b;
+}
+.post-body .l-character-special {
+  color: #fe8019;
+}
+.post-body .l-comment {
+  color: #928374;
+  font-style: italic;
+}
+.post-body .l-comment-documentation {
+  color: #928374;
+  font-style: italic;
+}
+.post-body .l-comment-error {
+  color: #1d2021;
+  background-color: #fb4934;
+  font-weight: bold;
+}
+.post-body .l-comment-hint {
+  color: #928374;
+  font-style: italic;
+}
+.post-body .l-comment-note {
+  color: #fe8019;
+}
+.post-body .l-comment-todo {
+  color: #1d2021;
+  background-color: #fabd2f;
+  font-weight: bold;
+  font-style: italic;
+}
+.post-body .l-comment-warning {
+  color: #fb4934;
+  font-weight: bold;
+}
+.post-body .l-constant {
+  color: #d3869b;
+}
+.post-body .l-constant-builtin {
+  color: #fe8019;
+}
+.post-body .l-constant-macro {
+  color: #8ec07c;
+}
+.post-body .l-constructor {
+  color: #fe8019;
+}
+.post-body .l-diff-delta {
+  background-color: #3e4934;
+}
+.post-body .l-diff-minus {
+  background-color: #792329;
+}
+.post-body .l-diff-plus {
+  background-color: #5a633a;
+}
+.post-body .l-function {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-function-builtin {
+  color: #fe8019;
+}
+.post-body .l-function-call {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-function-macro {
+  color: #8ec07c;
+}
+.post-body .l-function-method {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-function-method-call {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-highlighted {
+  background-color: #3c3836;
+}
+.post-body .l-keyword {
+  color: #fb4934;
+}
+.post-body .l-keyword-conditional {
+  color: #fb4934;
+}
+.post-body .l-keyword-conditional-ternary {
+  color: #fb4934;
+}
+.post-body .l-keyword-coroutine {
+  color: #fb4934;
+}
+.post-body .l-keyword-debug {
+  color: #fe8019;
+}
+.post-body .l-keyword-directive {
+  color: #8ec07c;
+}
+.post-body .l-keyword-directive-define {
+  color: #8ec07c;
+}
+.post-body .l-keyword-exception {
+  color: #fb4934;
+}
+.post-body .l-keyword-export {
+  color: #fb4934;
+}
+.post-body .l-keyword-function {
+  color: #fb4934;
+}
+.post-body .l-keyword-import {
+  color: #8ec07c;
+}
+.post-body .l-keyword-modifier {
+  color: #fb4934;
+}
+.post-body .l-keyword-operator {
+  color: #fb4934;
+}
+.post-body .l-keyword-repeat {
+  color: #fb4934;
+}
+.post-body .l-keyword-return {
+  color: #fb4934;
+}
+.post-body .l-keyword-type {
+  color: #fb4934;
+}
+.post-body .l-label {
+  color: #fb4934;
+}
+.post-body .l-markup {
+  color: #ebdbb2;
+}
+.post-body .l-markup-environment {
+  color: #8ec07c;
+}
+.post-body .l-markup-environment-name {
+  color: #fabd2f;
+}
+.post-body .l-markup-heading {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-markup-heading-1 {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-markup-heading-2 {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-markup-heading-3 {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-markup-heading-4 {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-markup-heading-5 {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-markup-heading-6 {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.post-body .l-markup-italic {
+  font-style: italic;
+}
+.post-body .l-markup-link {
+  color: #83a598;
+  text-decoration: underline;
+}
+.post-body .l-markup-link-label {
+  color: #fe8019;
+}
+.post-body .l-markup-link-url {
+  color: #83a598;
+  text-decoration: underline;
+}
+.post-body .l-markup-list {
+  color: #fe8019;
+}
+.post-body .l-markup-list-checked {
+  color: #b8bb26;
+}
+.post-body .l-markup-list-unchecked {
+  color: #928374;
+}
+.post-body .l-markup-math {
+  color: #fe8019;
+}
+.post-body .l-markup-quote {
+  color: #ebdbb2;
+}
+.post-body .l-markup-raw {
+  color: #b8bb26;
+  font-style: italic;
+}
+.post-body .l-markup-raw-block {
+  color: #b8bb26;
+  font-style: italic;
+}
+.post-body .l-markup-strikethrough {
+  text-decoration: line-through;
+}
+.post-body .l-markup-strong {
+  font-weight: bold;
+}
+.post-body .l-markup-underline {
+  text-decoration: underline;
+}
+.post-body .l-module {
+  color: #ebdbb2;
+}
+.post-body .l-module-builtin {
+  color: #fe8019;
+}
+.post-body .l-namespace {
+  color: #ebdbb2;
+}
+.post-body .l-number {
+  color: #d3869b;
+}
+.post-body .l-number-float {
+  color: #d3869b;
+}
+.post-body .l-operator {
+  color: #fe8019;
+}
+.post-body .l-property {
+  color: #83a598;
+}
+.post-body .l-punctuation-bracket {
+  color: #fe8019;
+}
+.post-body .l-punctuation-bracket-rainbow-1 {
+  color: #fb4934;
+}
+.post-body .l-punctuation-bracket-rainbow-2 {
+  color: #fabd2f;
+}
+.post-body .l-punctuation-bracket-rainbow-3 {
+  color: #83a598;
+}
+.post-body .l-punctuation-bracket-rainbow-4 {
+  color: #fe8019;
+}
+.post-body .l-punctuation-bracket-rainbow-5 {
+  color: #b8bb26;
+}
+.post-body .l-punctuation-bracket-rainbow-6 {
+  color: #d3869b;
+}
+.post-body .l-punctuation-delimiter {
+  color: #fe8019;
+}
+.post-body .l-punctuation-special {
+  color: #fe8019;
+}
+.post-body .l-string {
+  color: #b8bb26;
+  font-style: italic;
+}
+.post-body .l-string-documentation {
+  color: #b8bb26;
+  font-style: italic;
+}
+.post-body .l-string-escape {
+  color: #fe8019;
+}
+.post-body .l-string-regexp {
+  color: #b8bb26;
+  font-style: italic;
+}
+.post-body .l-string-special {
+  color: #fe8019;
+}
+.post-body .l-string-special-path {
+  color: #83a598;
+  text-decoration: underline;
+}
+.post-body .l-string-special-symbol {
+  color: #83a598;
+}
+.post-body .l-string-special-url {
+  color: #83a598;
+  text-decoration: underline;
+}
+.post-body .l-tag {
+  color: #fe8019;
+}
+.post-body .l-tag-attribute {
+  color: #83a598;
+}
+.post-body .l-tag-builtin {
+  color: #fe8019;
+}
+.post-body .l-tag-delimiter {
+  color: #fe8019;
+}
+.post-body .l-type {
+  color: #fabd2f;
+}
+.post-body .l-type-builtin {
+  color: #fabd2f;
+}
+.post-body .l-type-definition {
+  color: #fabd2f;
+}
+.post-body .l-variable {
+  color: #ebdbb2;
+}
+.post-body .l-variable-builtin {
+  color: #fe8019;
+}
+.post-body .l-variable-member {
+  color: #83a598;
+}
+.post-body .l-variable-parameter {
+  color: #83a598;
+}
+.post-body .l-variable-parameter-builtin {
+  color: #fe8019;
+}
