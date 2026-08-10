@@ -1,0 +1,14 @@
+_build/
+deps/
+.git/
+.github/
+.direnv/
+.nix-mix/
+.nix-hex/
+*.md
+.formatter.exs
+.credo.exs
+.envrc
+flake.nix
+flake.lock
+priv/static/assets/
