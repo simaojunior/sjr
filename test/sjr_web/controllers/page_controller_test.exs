@@ -1,5 +1,5 @@
 defmodule SjrWeb.PageControllerTest do
-  use SjrWeb.ConnCase
+  use SjrWeb.ConnCase, async: true
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")
