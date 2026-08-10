@@ -3,6 +3,7 @@
   author: "Simão Júnior",
   tags: ["placeholder"],
   rank: "S-rank",
+  icon: "layers",
   description: "How we moved 40 endpoints off a PHP service without one planned downtime window."
 }
 ---

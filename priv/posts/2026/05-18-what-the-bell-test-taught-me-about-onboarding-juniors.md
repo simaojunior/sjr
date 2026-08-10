@@ -3,6 +3,7 @@
   author: "Simão Júnior",
   tags: ["placeholder"],
   rank: "C-rank",
+  icon: "bell",
   description: "The test was never about the bells. Neither is your first-week ticket."
 }
 ---

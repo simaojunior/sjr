@@ -12,6 +12,7 @@ defmodule Sjr.Blog.Post do
     :tags,
     :date,
     :rank,
+    :icon,
     :last_modified,
     :text_content
   ]

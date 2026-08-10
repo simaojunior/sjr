@@ -3,6 +3,7 @@
   author: "Simão Júnior",
   tags: ["career", "architecture"],
   rank: "S-rank",
+  icon: "fingerprint",
   description: "Facial biometrics, OCR, and CPF validation, processing roughly 15 transactions per second in production."
 }
 ---

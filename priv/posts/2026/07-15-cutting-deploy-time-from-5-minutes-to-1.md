@@ -3,6 +3,7 @@
   author: "Simão Júnior",
   tags: ["career", "devops", "ci-cd"],
   rank: "A-rank",
+  icon: "rocket",
   description: "Building a CI/CD pipeline with GitHub Actions, Docker, and Azure Container Registry that turned deploys from a coffee break into a non-event."
 }
 ---

@@ -3,6 +3,7 @@
   author: "Simão Júnior",
   tags: ["placeholder"],
   rank: "A-rank",
+  icon: "key",
   description: "Every retry bug I've debugged came down to storing the wrong thing. What to persist, and when."
 }
 ---

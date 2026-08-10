@@ -3,6 +3,7 @@
   author: "Simão Júnior",
   tags: ["career", "automation"],
   rank: "A-rank",
+  icon: "gear",
   description: "Automating commercial reports and alerts with N8N saved 80 hours a month and kept SLA compliance at 100%."
 }
 ---
