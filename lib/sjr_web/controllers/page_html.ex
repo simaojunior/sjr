@@ -7,4 +7,7 @@ defmodule SjrWeb.PageHTML do
   use SjrWeb, :html
 
   embed_templates "page_html/*"
+
+  def last_updated_label, do: Calendar.strftime(Date.utc_today(), "%-d %b %Y")
+  def current_year, do: Date.utc_today().year
 end
