@@ -8,7 +8,8 @@
 import Config
 
 config :sjr,
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  visitor_counter_path: Path.expand("tmp/visitor_count_dev.txt", __DIR__ <> "/..")
 
 # Configure the endpoint
 config :sjr, SjrWeb.Endpoint,

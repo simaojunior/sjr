@@ -11,8 +11,7 @@ defmodule Sjr.Application do
       SjrWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:sjr, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Sjr.PubSub},
-      # Start a worker by calling: Sjr.Worker.start_link(arg)
-      # {Sjr.Worker, arg},
+      Sjr.VisitorCounter,
       # Start to serve requests, typically the last entry
       SjrWeb.Endpoint
     ]

@@ -56,6 +56,9 @@ if config_env() == :prod do
 
   config :sjr, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
 
+  config :sjr,
+    visitor_counter_path: System.get_env("VISITOR_COUNTER_PATH", "/data/visitor_count.txt")
+
   config :sjr, SjrWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
     http: [

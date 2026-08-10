@@ -149,7 +149,12 @@ defmodule SjrWeb.Layouts do
       <div style="text-align:right;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);line-height:1.9;">
         <div>
           you are shinobi no.
-          <span style="display:inline-block;padding:2px 6px;background:var(--color-neutral-900);border:1px solid var(--color-neutral-800);color:var(--color-chakra);letter-spacing:0.22em;">0042871</span>
+          <span
+            title="visitor count, persisted on a Fly volume"
+            style="display:inline-block;padding:2px 6px;background:var(--color-neutral-900);border:1px solid var(--color-neutral-800);color:var(--color-chakra);letter-spacing:0.22em;"
+          >
+            {visitor_number()}
+          </span>
         </div>
         <div>
           member of the <a href="#">webring</a> · <a href="#">← prev</a> · <a href="#">next →</a>
@@ -161,4 +166,10 @@ defmodule SjrWeb.Layouts do
   end
 
   defp current_year, do: Date.utc_today().year
+
+  defp visitor_number do
+    Sjr.VisitorCounter.current()
+    |> Integer.to_string()
+    |> String.pad_leading(3, "0")
+  end
 end
