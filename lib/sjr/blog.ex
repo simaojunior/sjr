@@ -26,6 +26,9 @@ defmodule Sjr.Blog do
   @doc "Posts visible on the home page and /scrolls listing — drafts excluded."
   def published_posts, do: Enum.reject(all_posts(), & &1.draft)
 
+  @doc "Draft posts, shown as coming-soon placeholders on the home page."
+  def draft_posts, do: Enum.filter(all_posts(), & &1.draft)
+
   def posts_by_tag(tag) do
     Enum.filter(published_posts(), fn post -> tag in post.tags end)
   end
