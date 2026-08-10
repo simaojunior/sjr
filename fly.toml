@@ -1,0 +1,21 @@
+# App name and secrets aren't set yet — see README's Deploy section.
+app = "simaojunior-dev"
+primary_region = "gru"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "4000"
+  PHX_HOST = "simaojunior.dev"
+
+[http_service]
+  internal_port = 4000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
