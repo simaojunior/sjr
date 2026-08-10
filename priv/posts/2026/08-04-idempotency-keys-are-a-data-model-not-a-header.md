@@ -7,7 +7,7 @@
 }
 ---
 > Placeholder post carried over from the homepage design mock. Replace with a
-> real write-up when ready — the title, rank, and teaser above are already
+> real write-up when ready; the title, rank, and teaser above are already
 > wired into the mission log on the homepage.
 
 Every retry bug I've debugged came down to storing the wrong thing. What to
