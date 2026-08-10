@@ -40,9 +40,9 @@
   --color-section-glow: #353b80;
   --color-section-ghost: #4c5397;
 
-  --font-heading: "Inter", system-ui, sans-serif;
+  --font-heading: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-heading-weight: 500;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-body: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --space-1: 2.8px;
