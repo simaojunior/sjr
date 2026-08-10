@@ -2,7 +2,7 @@
   <img src="static/images/sjr-logo.png" alt="Simão Júnior" width="240">
 </p>
 
-<h1 align="center">simaojunior.com</h1>
+<h1 align="center">simaojunior.dev</h1>
 
 <p align="center">
   Personal website and blog, built with
@@ -48,7 +48,7 @@ wrangler pages deploy public --project-name simaojunior
 ```
 
 The custom domain is attached in the dashboard: **Workers & Pages → simaojunior →
-Custom domains → `simaojunior.com`**. A domain can only live on one project.
+Custom domains → `simaojunior.dev`**. A domain can only live on one project.
 
 ## Structure
 

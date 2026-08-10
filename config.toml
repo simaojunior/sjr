@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://simaojunior.com"
+base_url = "https://simaojunior.dev"
 
 title = "Simão Júnior"
 description = "Software Engineer · backend · distributed systems · São Paulo"
@@ -71,5 +71,5 @@ social_links = [
 job_title = "Software Engineer"
 links = [
   "https://github.com/simaojunior",
-  "https://simaojunior.com",
+  "https://simaojunior.dev",
 ]
