@@ -23,10 +23,10 @@ defmodule Sjr.Blog do
   def all_posts, do: @posts
   def all_tags, do: @tags
 
-  @doc "Posts visible on the home page and /scrolls listing — drafts excluded."
+  @doc "Posts visible on the home page and /scrolls listing, drafts excluded."
   def published_posts, do: Enum.reject(all_posts(), & &1.draft)
 
-  @doc "Published long-form posts for the mission log — til posts live on /til instead."
+  @doc "Published long-form posts for the mission log; til posts live on /til instead."
   def scroll_posts, do: Enum.reject(published_posts(), &("til" in &1.tags))
 
   @doc "Featured draft posts, shown as coming-soon placeholders on the home page."
