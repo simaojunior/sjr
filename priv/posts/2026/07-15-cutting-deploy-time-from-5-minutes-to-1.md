@@ -1,6 +1,7 @@
 %{
   draft: true,
   featured: true,
+  translation_key: "cutting-deploy-time",
   title: "Cutting deploy time from 5 minutes to 1",
   author: "Simão Júnior",
   tags: ["career", "devops", "ci-cd"],
