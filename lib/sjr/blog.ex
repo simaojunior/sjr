@@ -27,21 +27,41 @@ defmodule Sjr.Blog do
   def published_posts, do: Enum.reject(all_posts(), & &1.draft)
 
   @doc "Published long-form posts for the mission log; til posts live on /til instead."
-  def scroll_posts, do: Enum.reject(published_posts(), &("til" in &1.tags))
-
-  @doc "Featured draft posts, shown as coming-soon placeholders on the home page."
-  def draft_posts, do: Enum.filter(all_posts(), &(&1.draft && &1.featured))
-
-  def posts_by_tag(tag) do
-    Enum.filter(published_posts(), fn post -> tag in post.tags end)
+  def scroll_posts(locale \\ "en") do
+    published_posts()
+    |> Enum.reject(&("til" in &1.tags))
+    |> Enum.filter(&(&1.locale == locale))
   end
 
-  @doc "Finds a post by id regardless of draft status, so preview links still work."
+  @doc "Featured draft posts, shown as coming-soon placeholders on the home page."
+  def draft_posts(locale \\ "en") do
+    Enum.filter(all_posts(), &(&1.draft && &1.featured && &1.locale == locale))
+  end
+
+  def posts_by_tag(tag, locale \\ "en") do
+    Enum.filter(published_posts(), fn post -> tag in post.tags and post.locale == locale end)
+  end
+
+  @doc "Finds a post by id regardless of draft or locale, so preview links still work."
   def find_by_id(id) do
     Enum.find(all_posts(), fn post -> post.id == id end)
   end
 
-  def recent_posts(limit \\ 4), do: Enum.take(scroll_posts(), limit)
+  @doc """
+  Finds the sibling translation of a post via its `translation_key`,
+  used to cross-link an EN post to its PT-BR counterpart and back.
+  """
+  def find_translation(%Sjr.Blog.Post{translation_key: nil}), do: nil
+
+  def find_translation(%Sjr.Blog.Post{translation_key: key, locale: locale}) do
+    Enum.find(published_posts(), &(&1.translation_key == key && &1.locale != locale))
+  end
+
+  @doc "Label for a link pointing at `translation`, in the language it's written in."
+  def translation_link_label(%Sjr.Blog.Post{locale: "pt-br"}), do: "🇧🇷 Ler em português"
+  def translation_link_label(%Sjr.Blog.Post{locale: _}), do: "🇺🇸 Read in English"
+
+  def recent_posts(locale \\ "en", limit \\ 4), do: Enum.take(scroll_posts(locale), limit)
 
   @words_per_minute 200
 

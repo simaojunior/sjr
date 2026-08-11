@@ -90,6 +90,8 @@ defmodule SjrWeb.Layouts do
   end
 
   @doc "The site header: brand, nav links, theme toggle. Shared across pages."
+  attr :locale, :string, default: "en"
+
   def site_nav(assigns) do
     ~H"""
     <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:20px 0 12px;border-bottom:1px solid var(--color-neutral-800);flex-wrap:wrap;">
@@ -111,6 +113,14 @@ defmodule SjrWeb.Layouts do
         <a href="/#projects">[bingo book]</a>
         <a href="/#about">[about]</a>
         <a href="/uses">[uses]</a>
+        <button
+          type="button"
+          data-locale-toggle
+          data-locale={@locale}
+          style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:var(--color-neutral-400);border:1px solid var(--color-neutral-700);border-radius:var(--radius-sm);padding:5px 9px;cursor:pointer;"
+        >
+          {String.upcase(@locale)}
+        </button>
         <button
           type="button"
           data-theme-toggle

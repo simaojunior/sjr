@@ -15,8 +15,10 @@ defmodule Sjr.Blog.Post do
     :icon,
     :last_modified,
     :text_content,
+    :translation_key,
     draft: false,
-    featured: false
+    featured: false,
+    locale: "en"
   ]
 
   def build(filename, attrs, body) do
