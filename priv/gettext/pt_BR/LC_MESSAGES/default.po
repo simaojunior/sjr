@@ -11,48 +11,48 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
-#: lib/sjr_web/controllers/blog_html/show.html.heex:41
-#: lib/sjr_web/controllers/page_html/home.html.heex:113
+#: lib/sjr_web/controllers/blog_html/show.html.heex:44
+#: lib/sjr_web/controllers/page_html/home.html.heex:115
 #, elixir-autogen, elixir-format
 msgid "%{rank} · %{minutes} min"
 msgstr "%{rank} · %{minutes} min"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:280
+#: lib/sjr_web/controllers/page_html/home.html.heex:290
 #, elixir-autogen, elixir-format
 msgid "(third attempt) · learning Elixir · rewatching Shippuden for the arc where nothing happens"
 msgstr "(terceira tentativa) · aprendendo Elixir · reassistindo Shippuden até o arco em que nada acontece"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:140
+#: lib/sjr_web/controllers/page_html/home.html.heex:145
 #, elixir-autogen, elixir-format
 msgid "4 active · 0 rogue (for once)"
 msgstr "4 ativos · 0 desertor (pra variar)"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:167
+#: lib/sjr_web/controllers/page_html/home.html.heex:172
 #, elixir-autogen, elixir-format
 msgid "A mental health companion app built around a persistent virtual companion, daily check-ins, and evidence-based practices. No streak guilt."
 msgstr "Um app de saúde mental construído em torno de um companheiro virtual persistente, check-ins diários e práticas baseadas em evidências. Sem culpa por quebrar sequência."
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:151
+#: lib/sjr_web/controllers/page_html/home.html.heex:156
 #, elixir-autogen, elixir-format
 msgid "A minimalist terminal multiplexer with first-class AI context. Sessions survive disconnects, and each one exposes its own context file so your AI assistant knows what you're doing."
 msgstr "Um multiplexador de terminal minimalista com contexto de IA de primeira classe. As sessões sobrevivem a desconexões, e cada uma expõe seu próprio arquivo de contexto para o seu assistente de IA saber o que você está fazendo."
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:191
+#: lib/sjr_web/controllers/page_html/home.html.heex:196
 #, elixir-autogen, elixir-format
 msgid "A personal finance command center built around the 50/30/20 method: budgets, savings goals, and trends in one place."
 msgstr "Um centro de comando de finanças pessoais construído em torno do método 50/30/20: orçamentos, metas de economia e tendências em um só lugar."
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:179
+#: lib/sjr_web/controllers/page_html/home.html.heex:184
 #, elixir-autogen, elixir-format
 msgid "AI-powered video transcription for professional translators. Upload a video, get back a timestamped transcript ready to translate."
 msgstr "Transcrição de vídeo com IA para tradutores profissionais. Envie um vídeo, receba de volta uma transcrição com marcação de tempo pronta para traduzir."
 
-#: lib/sjr_web/components/layouts.ex:153
+#: lib/sjr_web/components/layouts.ex:162
 #, elixir-autogen, elixir-format
 msgid "ANY BROWSER"
 msgstr "QUALQUER NAVEGADOR"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:250
+#: lib/sjr_web/controllers/page_html/home.html.heex:255
 #, elixir-autogen, elixir-format
 msgid "Academy record"
 msgstr "Histórico da academia"
@@ -68,133 +68,133 @@ msgstr "Ações"
 msgid "Attempting to reconnect"
 msgstr "Tentando reconectar"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:270
+#: lib/sjr_web/controllers/page_html/home.html.heex:280
 #, elixir-autogen, elixir-format
 msgid "B.Sc. Information Systems, Universidade Anhembi Morumbi"
 msgstr "Bacharelado em Sistemas de Informação, Universidade Anhembi Morumbi"
 
-#: lib/sjr_web/components/layouts.ex:153
+#: lib/sjr_web/components/layouts.ex:162
 #, elixir-autogen, elixir-format
 msgid "BEST VIEWED"
 msgstr "MELHOR VISUALIZADO"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:262
+#: lib/sjr_web/controllers/page_html/home.html.heex:270
 #, elixir-autogen, elixir-format
 msgid "Backend Engineer"
 msgstr "Engenheiro Backend"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:266
+#: lib/sjr_web/controllers/page_html/home.html.heex:275
 #, elixir-autogen, elixir-format
 msgid "Backend Engineer (Junior)"
 msgstr "Engenheiro Backend (Júnior)"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:258
+#: lib/sjr_web/controllers/page_html/home.html.heex:265
 #, elixir-autogen, elixir-format
 msgid "Backend Engineer (Mid III)"
 msgstr "Engenheiro Backend (Pleno III)"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:38
-#: lib/sjr_web/controllers/page_html/home.html.heex:138
+#: lib/sjr_web/controllers/page_html/home.html.heex:39
+#: lib/sjr_web/controllers/page_html/home.html.heex:143
 #, elixir-autogen, elixir-format
 msgid "Bingo book"
 msgstr "Livro de bingo"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:224
+#: lib/sjr_web/controllers/page_html/home.html.heex:229
 #, elixir-autogen, elixir-format
 msgid "Boring on purpose"
 msgstr "Chato de propósito"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:243
+#: lib/sjr_web/controllers/page_html/home.html.heex:248
 #, elixir-autogen, elixir-format
 msgid "Borrowed from a certain orange idiot. It still holds up for estimates."
 msgstr "Emprestado de um certo idiota laranja. Ainda funciona pra estimativas."
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:71
+#: lib/sjr_web/controllers/page_html/home.html.heex:72
 #, elixir-autogen, elixir-format
 msgid "Caveo · backend (hybrid)"
 msgstr "Caveo · backend (híbrido)"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:235
+#: lib/sjr_web/controllers/page_html/home.html.heex:240
 #, elixir-autogen, elixir-format
 msgid "Every post here started as an explanation I owed someone on my team."
 msgstr "Todo post aqui começou como uma explicação que eu devia a alguém do time."
 
-#: lib/sjr_web/components/layouts.ex:150
+#: lib/sjr_web/components/layouts.ex:159
 #, elixir-autogen, elixir-format
 msgid "FOREVER"
 msgstr "PRA SEMPRE"
 
-#: lib/sjr_web/components/layouts.ex:144
+#: lib/sjr_web/components/layouts.ex:153
 #, elixir-autogen, elixir-format
 msgid "HAND CODED"
 msgstr "FEITO À MÃO"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:59
+#: lib/sjr_web/controllers/page_html/home.html.heex:60
 #, elixir-autogen, elixir-format
 msgid "Jōnin · backend"
 msgstr "Jōnin · backend"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:7
+#: lib/sjr_web/controllers/page_html/home.html.heex:8
 #, elixir-autogen, elixir-format
 msgid "MISSION BOARD"
 msgstr "QUADRO DE MISSÕES"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:97
+#: lib/sjr_web/controllers/page_html/home.html.heex:98
 #, elixir-autogen, elixir-format
 msgid "Mission log"
 msgstr "Diário de missões"
 
-#: lib/sjr_web/components/layouts.ex:144
+#: lib/sjr_web/components/layouts.ex:153
 #, elixir-autogen, elixir-format
 msgid "NO BUILD STEP"
 msgstr "SEM ETAPA DE BUILD"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:240
+#: lib/sjr_web/controllers/page_html/home.html.heex:245
 #, elixir-autogen, elixir-format
 msgid "Never go back on your word"
 msgstr "Nunca volte atrás na sua palavra"
 
-#: lib/sjr_web/controllers/page_html/uses.html.heex:32
+#: lib/sjr_web/controllers/page_html/uses.html.heex:33
 #, elixir-autogen, elixir-format
 msgid "NixOS (I use NixOS BTW)"
 msgstr "NixOS (a propósito, eu uso NixOS)"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:65
+#: lib/sjr_web/controllers/page_html/home.html.heex:66
 #, elixir-autogen, elixir-format
 msgid "Onboarding & KYC systems, event-driven architecture"
 msgstr "Sistemas de onboarding e KYC, arquitetura orientada a eventos"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:37
+#: lib/sjr_web/controllers/page_html/home.html.heex:38
 #, elixir-autogen, elixir-format
 msgid "Read the scrolls"
 msgstr "Ler os pergaminhos"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:278
+#: lib/sjr_web/controllers/page_html/home.html.heex:288
 #, elixir-autogen, elixir-format
 msgid "Reading"
 msgstr "Lendo"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:32
+#: lib/sjr_web/controllers/page_html/home.html.heex:33
 #, elixir-autogen, elixir-format
 msgid "Self-taught, still training. This site is the slow internet: notes I actually finished, projects that are still running, and a shrine to a ninja cartoon I have not grown out of."
 msgstr "Autodidata, ainda treinando. Este site é a internet devagar: anotações que eu realmente terminei, projetos que ainda estão de pé, e um altar para um desenho de ninja do qual eu nunca cresci."
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:39
+#: lib/sjr_web/controllers/page_html/home.html.heex:40
 #, elixir-autogen, elixir-format
 msgid "Send a summon"
 msgstr "Enviar um chamado"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:254
+#: lib/sjr_web/controllers/page_html/home.html.heex:260
 #, elixir-autogen, elixir-format
 msgid "Senior Backend Engineer"
 msgstr "Engenheiro Backend Sênior"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:27
+#: lib/sjr_web/controllers/page_html/home.html.heex:28
 #, elixir-autogen, elixir-format
 msgid "Senior backend engineer with 5+ years building critical, scalable systems for high-availability environments: Node.js, TypeScript, Elixir, Postgres, event-driven architectures on AWS."
 msgstr "Engenheiro backend sênior com mais de 5 anos construindo sistemas críticos e escaláveis para ambientes de alta disponibilidade: Node.js, TypeScript, Elixir, Postgres, arquiteturas orientadas a eventos na AWS."
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:207
+#: lib/sjr_web/controllers/page_html/home.html.heex:212
 #, elixir-autogen, elixir-format
 msgid "Ship the version you can explain at 3am. Then teach it to someone else, or you never really learned it."
 msgstr "Publique a versão que você consegue explicar às 3 da manhã. Depois ensine a outra pessoa, ou você nunca aprendeu de verdade."
@@ -204,32 +204,32 @@ msgstr "Publique a versão que você consegue explicar às 3 da manhã. Depois e
 msgid "Something went wrong!"
 msgstr "Algo deu errado!"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:126
+#: lib/sjr_web/controllers/page_html/home.html.heex:129
 #, elixir-autogen, elixir-format
 msgid "TBD"
 msgstr "A definir"
 
-#: lib/sjr_web/components/layouts.ex:150
+#: lib/sjr_web/components/layouts.ex:159
 #, elixir-autogen, elixir-format
 msgid "TEAM 7"
 msgstr "TIME 7"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:232
+#: lib/sjr_web/controllers/page_html/home.html.heex:237
 #, elixir-autogen, elixir-format
 msgid "Teach it or you don't know it"
 msgstr "Ensine ou você não sabe"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:227
+#: lib/sjr_web/controllers/page_html/home.html.heex:232
 #, elixir-autogen, elixir-format
 msgid "The clever solution is the one you get paged about."
 msgstr "A solução esperta é aquela que te acorda de madrugada com um alerta."
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:219
+#: lib/sjr_web/controllers/page_html/home.html.heex:224
 #, elixir-autogen, elixir-format
 msgid "Three rules"
 msgstr "Três regras"
 
-#: lib/sjr_web/controllers/page_html/til.html.heex:13
+#: lib/sjr_web/controllers/page_html/til.html.heex:14
 #, elixir-autogen, elixir-format
 msgid "Today I learned: small, quick notes that didn't earn a full scroll."
 msgstr "Hoje eu aprendi: anotações pequenas e rápidas que não renderam um pergaminho inteiro."
@@ -244,67 +244,67 @@ msgstr "Ferramentas"
 msgid "We can't find the internet"
 msgstr "Não conseguimos encontrar a internet"
 
-#: lib/sjr_web/controllers/page_html/uses.html.heex:13
+#: lib/sjr_web/controllers/page_html/uses.html.heex:14
 #, elixir-autogen, elixir-format
 msgid "What's actually in the pouch, not what's aspirational. Updated when something changes, not on a schedule."
 msgstr "O que realmente está na bolsa, não o que é aspiracional. Atualizado quando algo muda, não por agenda."
 
-#: lib/sjr_web/components/layouts.ex:147
+#: lib/sjr_web/components/layouts.ex:156
 #, elixir-autogen, elixir-format
 msgid "YES REALLY"
 msgstr "SÉRIO MESMO"
 
-#: lib/sjr_web/components/layouts.ex:114
+#: lib/sjr_web/components/layouts.ex:120
 #, elixir-autogen, elixir-format
 msgid "[about]"
 msgstr "[sobre]"
 
-#: lib/sjr_web/components/layouts.ex:113
+#: lib/sjr_web/components/layouts.ex:119
 #, elixir-autogen, elixir-format
 msgid "[bingo book]"
 msgstr "[livro de bingo]"
 
-#: lib/sjr_web/components/layouts.ex:110
+#: lib/sjr_web/components/layouts.ex:115
 #, elixir-autogen, elixir-format
 msgid "[home]"
 msgstr "[início]"
 
-#: lib/sjr_web/components/layouts.ex:111
+#: lib/sjr_web/components/layouts.ex:117
 #, elixir-autogen, elixir-format
 msgid "[scrolls]"
 msgstr "[pergaminhos]"
 
-#: lib/sjr_web/components/layouts.ex:112
+#: lib/sjr_web/components/layouts.ex:118
 #, elixir-autogen, elixir-format
 msgid "[til]"
 msgstr "[til]"
 
-#: lib/sjr_web/components/layouts.ex:115
+#: lib/sjr_web/components/layouts.ex:121
 #, elixir-autogen, elixir-format
 msgid "[uses]"
 msgstr "[ferramentas]"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:75
+#: lib/sjr_web/controllers/page_html/home.html.heex:76
 #, elixir-autogen, elixir-format
 msgid "active duty · open to interesting missions"
 msgstr "em atividade · aberto a missões interessantes"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:62
+#: lib/sjr_web/controllers/page_html/home.html.heex:63
 #, elixir-autogen, elixir-format
 msgid "affinity"
 msgstr "afinidade"
 
-#: lib/sjr_web/controllers/page_html/uses.html.heex:35
+#: lib/sjr_web/controllers/page_html/uses.html.heex:36
 #, elixir-autogen, elixir-format
 msgid "ai pair"
 msgstr "par de IA"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:99
+#: lib/sjr_web/controllers/page_html/home.html.heex:100
 #, elixir-autogen, elixir-format
 msgid "all %{count} scrolls"
 msgstr "%{count} pergaminhos ao todo"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:164
+#: lib/sjr_web/controllers/page_html/home.html.heex:169
 #, elixir-autogen, elixir-format
 msgid "building now"
 msgstr "construindo agora"
@@ -314,28 +314,28 @@ msgstr "construindo agora"
 msgid "close"
 msgstr "fechar"
 
-#: lib/sjr_web/controllers/blog_html/show.html.heex:33
-#: lib/sjr_web/controllers/page_html/home.html.heex:129
+#: lib/sjr_web/controllers/blog_html/show.html.heex:36
+#: lib/sjr_web/controllers/page_html/home.html.heex:132
 #, elixir-autogen, elixir-format
 msgid "coming soon"
 msgstr "em breve"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:275
+#: lib/sjr_web/controllers/page_html/home.html.heex:285
 #, elixir-autogen, elixir-format
 msgid "currently training"
 msgstr "treinando atualmente"
 
-#: lib/sjr_web/controllers/page_html/uses.html.heex:19
+#: lib/sjr_web/controllers/page_html/uses.html.heex:20
 #, elixir-autogen, elixir-format
 msgid "editor"
 msgstr "editor"
 
-#: lib/sjr_web/controllers/page_html/til.html.heex:7
+#: lib/sjr_web/controllers/page_html/til.html.heex:8
 #, elixir-autogen, elixir-format
 msgid "field notes"
 msgstr "notas de campo"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:204
+#: lib/sjr_web/controllers/page_html/home.html.heex:209
 #, elixir-autogen, elixir-format
 msgid "forbidden scroll · my ninja way"
 msgstr "pergaminho proibido · meu caminho ninja"
@@ -345,128 +345,128 @@ msgstr "pergaminho proibido · meu caminho ninja"
 msgid "hidden leaf branch office · est. 2019"
 msgstr "filial da vila da folha oculta · fundada em 2019"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:80
+#: lib/sjr_web/controllers/page_html/home.html.heex:81
 #, elixir-autogen, elixir-format
 msgid "jutsu registry"
 msgstr "registro de jutsus"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:21
+#: lib/sjr_web/controllers/page_html/home.html.heex:22
 #, elixir-autogen, elixir-format
 msgid "konoha shinobi · reg. 012-607"
 msgstr "shinobi de Konoha · reg. 012-607"
 
-#: lib/sjr_web/components/layouts.ex:171
+#: lib/sjr_web/components/layouts.ex:187
 #, elixir-autogen, elixir-format
 msgid "member of the"
 msgstr "membro do"
 
-#: lib/sjr_web/components/layouts.ex:171
+#: lib/sjr_web/components/layouts.ex:187
 #, elixir-autogen, elixir-format
 msgid "next →"
 msgstr "próximo →"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:45
+#: lib/sjr_web/controllers/page_html/home.html.heex:46
 #, elixir-autogen, elixir-format
 msgid "ninja registration card"
 msgstr "carteira de registro ninja"
 
-#: lib/sjr_web/controllers/page_html/uses.html.heex:7
+#: lib/sjr_web/controllers/page_html/uses.html.heex:8
 #, elixir-autogen, elixir-format
 msgid "ninja tool pouch"
 msgstr "bolsa de ferramentas ninja"
 
-#: lib/sjr_web/components/layouts.ex:173
+#: lib/sjr_web/components/layouts.ex:189
 #, elixir-autogen, elixir-format
 msgid "no cookies, no trackers, no popups"
 msgstr "sem cookies, sem rastreadores, sem popups"
 
-#: lib/sjr_web/controllers/page_html/til.html.heex:35
+#: lib/sjr_web/controllers/page_html/til.html.heex:39
 #, elixir-autogen, elixir-format
 msgid "nothing logged yet"
 msgstr "nada registrado ainda"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:148
+#: lib/sjr_web/controllers/page_html/home.html.heex:153
 #, elixir-autogen, elixir-format
 msgid "open source · Rust"
 msgstr "código aberto · Rust"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:176
+#: lib/sjr_web/controllers/page_html/home.html.heex:181
 #, elixir-autogen, elixir-format
 msgid "private · SaaS"
 msgstr "privado · SaaS"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:188
+#: lib/sjr_web/controllers/page_html/home.html.heex:193
 #, elixir-autogen, elixir-format
 msgid "private · side project"
 msgstr "privado · projeto pessoal"
 
-#: lib/sjr_web/controllers/blog_html/show.html.heex:24
-#: lib/sjr_web/controllers/page_html/home.html.heex:131
+#: lib/sjr_web/controllers/blog_html/show.html.heex:27
+#: lib/sjr_web/controllers/page_html/home.html.heex:134
 #, elixir-autogen, elixir-format
 msgid "queued"
 msgstr "na fila"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:56
+#: lib/sjr_web/controllers/page_html/home.html.heex:57
 #, elixir-autogen, elixir-format
 msgid "rank"
 msgstr "patente"
 
-#: lib/sjr_web/controllers/page_html/uses.html.heex:27
+#: lib/sjr_web/controllers/page_html/uses.html.heex:28
 #, elixir-autogen, elixir-format
 msgid "shell"
 msgstr "shell"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:68
+#: lib/sjr_web/controllers/page_html/home.html.heex:69
 #, elixir-autogen, elixir-format
 msgid "squad"
 msgstr "esquadrão"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:73
+#: lib/sjr_web/controllers/page_html/home.html.heex:74
 #, elixir-autogen, elixir-format
 msgid "status"
 msgstr "status"
 
-#: lib/sjr_web/controllers/page_html/uses.html.heex:23
+#: lib/sjr_web/controllers/page_html/uses.html.heex:24
 #, elixir-autogen, elixir-format
 msgid "terminal"
 msgstr "terminal"
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:50
+#: lib/sjr_web/controllers/page_html/home.html.heex:51
 #, elixir-autogen, elixir-format
 msgid "village"
 msgstr "vila"
 
-#: lib/sjr_web/components/layouts.ex:164
+#: lib/sjr_web/components/layouts.ex:180
 #, elixir-autogen, elixir-format
 msgid "visitor count, persisted on a Fly volume"
 msgstr "contador de visitantes, persistido em um volume da Fly"
 
-#: lib/sjr_web/components/layouts.ex:171
+#: lib/sjr_web/components/layouts.ex:187
 #, elixir-autogen, elixir-format
 msgid "webring"
 msgstr "webring"
 
-#: lib/sjr_web/components/layouts.ex:162
+#: lib/sjr_web/components/layouts.ex:178
 #, elixir-autogen, elixir-format
 msgid "you are shinobi no."
 msgstr "você é o shinobi nº"
 
-#: lib/sjr_web/controllers/blog_html/show.html.heex:18
+#: lib/sjr_web/controllers/blog_html/show.html.heex:21
 #, elixir-autogen, elixir-format
 msgid "← all scrolls"
 msgstr "← todos os pergaminhos"
 
-#: lib/sjr_web/controllers/blog_html/show.html.heex:11
+#: lib/sjr_web/controllers/blog_html/show.html.heex:13
 #, elixir-autogen, elixir-format
 msgid "← all til"
 msgstr "← todos os til"
 
-#: lib/sjr_web/components/layouts.ex:171
+#: lib/sjr_web/components/layouts.ex:187
 #, elixir-autogen, elixir-format
 msgid "← prev"
 msgstr "← anterior"
 
-#: lib/sjr_web/components/layouts.ex:130
+#: lib/sjr_web/components/layouts.ex:139
 #, elixir-autogen, elixir-format
 msgid "☾ dark"
 msgstr "☾ escuro"
@@ -475,3 +475,18 @@ msgstr "☾ escuro"
 #, elixir-autogen, elixir-format
 msgid "✧ status: shipping day to day %{nbsp}·%{nbsp} ✧ training: Elixir, OTP supervision trees %{nbsp}·%{nbsp} ✧ site running on Phoenix + Fly.io %{nbsp}·%{nbsp} ✧ rewatching Shippuden, arc 14 %{nbsp}·%{nbsp} ✧ last updated %{date} %{nbsp}·%{nbsp}%{nbsp}"
 msgstr "✧ status: entregando dia a dia %{nbsp}·%{nbsp} ✧ treinando: Elixir, árvores de supervisão OTP %{nbsp}·%{nbsp} ✧ site rodando em Phoenix + Fly.io %{nbsp}·%{nbsp} ✧ reassistindo Shippuden, arco 14 %{nbsp}·%{nbsp} ✧ última atualização %{date} %{nbsp}·%{nbsp}%{nbsp}"
+
+#: lib/sjr_web/components/layouts.ex:166
+#, elixir-autogen, elixir-format
+msgid "Elsewhere"
+msgstr "Em outros lugares"
+
+#: lib/sjr_web/components/layouts/root.html.heex:29
+#, elixir-autogen, elixir-format
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+#: lib/sjr_web/components/layouts.ex:127
+#, elixir-autogen, elixir-format
+msgid "Switch language"
+msgstr "Trocar idioma"

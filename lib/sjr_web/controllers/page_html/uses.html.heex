@@ -2,6 +2,7 @@
   <div style="max-width:760px;margin:0 auto;">
     <Layouts.site_nav locale={@locale} />
 
+    <main id="main-content">
     <div style="padding:36px 0 28px;border-bottom:1px solid var(--color-neutral-800);">
       <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);margin-bottom:10px;">
         {gettext("ninja tool pouch")}
@@ -14,28 +15,29 @@
       </p>
     </div>
 
-    <div style="padding:32px 0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
+    <dl style="margin:0;padding:32px 0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
       <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <span style="color:var(--color-neutral-600);white-space:nowrap;">{gettext("editor")}</span>
-        <span style="color:var(--color-neutral-200);">Neovim</span>
+        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("editor")}</dt>
+        <dd style="margin:0;color:var(--color-neutral-200);">Neovim</dd>
       </div>
       <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <span style="color:var(--color-neutral-600);white-space:nowrap;">{gettext("terminal")}</span>
-        <span style="color:var(--color-neutral-200);">WezTerm / Ghostty</span>
+        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("terminal")}</dt>
+        <dd style="margin:0;color:var(--color-neutral-200);">WezTerm / Ghostty</dd>
       </div>
       <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <span style="color:var(--color-neutral-600);white-space:nowrap;">{gettext("shell")}</span>
-        <span style="color:var(--color-neutral-200);">fish / Nushell</span>
+        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("shell")}</dt>
+        <dd style="margin:0;color:var(--color-neutral-200);">fish / Nushell</dd>
       </div>
       <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <span style="color:var(--color-neutral-600);white-space:nowrap;">os</span>
-        <span style="color:var(--color-neutral-200);">{gettext("NixOS (I use NixOS BTW)")}</span>
+        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">os</dt>
+        <dd style="margin:0;color:var(--color-neutral-200);">{gettext("NixOS (I use NixOS BTW)")}</dd>
       </div>
       <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;">
-        <span style="color:var(--color-neutral-600);white-space:nowrap;">{gettext("ai pair")}</span>
-        <span style="color:var(--color-neutral-200);">Claude Code CLI</span>
+        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("ai pair")}</dt>
+        <dd style="margin:0;color:var(--color-neutral-200);">Claude Code CLI</dd>
       </div>
-    </div>
+    </dl>
+    </main>
 
     <Layouts.site_footer />
   </div>

@@ -2,14 +2,15 @@
   <div style="max-width:1060px;margin:0 auto;">
     <Layouts.site_nav locale={@locale} />
 
+    <main id="main-content">
     <div style="margin-top:12px;background:var(--color-accent-900);border:1px solid var(--color-accent-800);border-radius:var(--radius-sm);overflow:hidden;display:flex;align-items:center;">
       <div style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-right:1px solid var(--color-accent-800);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;color:var(--color-accent-300);flex:none;">
-        <span style="width:7px;height:7px;border-radius:50%;background:var(--color-chakra);animation:blink 1.4s steps(1,end) infinite;"></span>{gettext("MISSION BOARD")}
+        <span aria-hidden="true" style="width:7px;height:7px;border-radius:50%;background:var(--color-chakra);animation:blink 1.4s steps(1,end) infinite;"></span>{gettext("MISSION BOARD")}
       </div>
       <div style="overflow:hidden;flex:1;">
         <div style="display:flex;white-space:nowrap;width:max-content;animation:marquee 34s linear infinite;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-400);">
           <span style="padding:9px 0;">{ticker_text()}</span>
-          <span style="padding:9px 0;">{ticker_text()}</span>
+          <span aria-hidden="true" style="padding:9px 0;">{ticker_text()}</span>
         </div>
       </div>
     </div>
@@ -45,36 +46,36 @@
           <span>{gettext("ninja registration card")}</span>
           <span style="border:1px solid var(--color-chakra-dim);color:var(--color-chakra);padding:1px 6px;border-radius:2px;letter-spacing:0.1em;white-space:nowrap;">A-RANK</span>
         </div>
-        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
-          <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+        <dl style="display:grid;grid-template-columns:auto minmax(0,1fr);margin:0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
             {gettext("village")}
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
             São Paulo, BR · UTC-3
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
             {gettext("rank")}
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
             {gettext("Jōnin · backend")}
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
             {gettext("affinity")}
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
             {gettext("Onboarding & KYC systems, event-driven architecture")}
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
             {gettext("squad")}
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
             {gettext("Caveo · backend (hybrid)")}
-          </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-600);">{gettext("status")}</div>
-          <div style="padding:9px 12px;color:var(--color-leaf-light);">
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);">{gettext("status")}</dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-leaf-light);">
             {gettext("active duty · open to interesting missions")}
-          </div>
-        </div>
+          </dd>
+        </dl>
         <div style="padding:12px;border-top:1px solid var(--color-neutral-800);">
           <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:8px;">
             {gettext("jutsu registry")}
@@ -99,37 +100,41 @@
         <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);">{gettext("all %{count} scrolls", count: @total_posts)}</span>
       </div>
 
-      <a
-        :for={post <- @posts}
-        href={~p"/posts/#{post.id}"}
-        class="mission-row"
-        style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;"
-      >
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">{post.date}</span>
-        <span>
-          <span style="display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;">{post.title}</span>
-          <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">{post.description}</span>
-        </span>
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-chakra);white-space:nowrap;">{gettext(
-          "%{rank} · %{minutes} min",
-          rank: Sjr.Blog.rank(post),
-          minutes: Sjr.Blog.reading_time_minutes(post)
-        )}</span>
-      </a>
+      <ul style="list-style:none;margin:0;padding:0;">
+        <li :for={post <- @posts}>
+          <a
+            href={~p"/posts/#{post.id}"}
+            class="mission-row"
+            style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;"
+          >
+            <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">{post.date}</span>
+            <span>
+              <span style="display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;">{post.title}</span>
+              <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">{post.description}</span>
+            </span>
+            <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-chakra);white-space:nowrap;">{gettext(
+              "%{rank} · %{minutes} min",
+              rank: Sjr.Blog.rank(post),
+              minutes: Sjr.Blog.reading_time_minutes(post)
+            )}</span>
+          </a>
+        </li>
 
-      <a
-        :for={post <- @draft_posts}
-        href={~p"/posts/#{post.id}"}
-        class="mission-row"
-        style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;opacity:0.55;"
-      >
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">{gettext("TBD")}</span>
-        <span>
-          <span style="display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;">{post.title}</span>
-          <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">{gettext("coming soon")}</span>
-        </span>
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);white-space:nowrap;">{gettext("queued")}</span>
-      </a>
+        <li :for={post <- @draft_posts}>
+          <a
+            href={~p"/posts/#{post.id}"}
+            class="mission-row"
+            style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;opacity:0.55;"
+          >
+            <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">{gettext("TBD")}</span>
+            <span>
+              <span style="display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;">{post.title}</span>
+              <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">{gettext("coming soon")}</span>
+            </span>
+            <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);white-space:nowrap;">{gettext("queued")}</span>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div id="projects" style="padding:52px 0 0;">
@@ -249,27 +254,32 @@
         <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0 0 14px;color:var(--color-neutral-100);">
           {gettext("Academy record")}
         </h2>
-        <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
+        <dl style="margin:0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2026</span><span style="color:var(--color-neutral-200);">{gettext("Senior Backend Engineer")} ·
-            <span style="color:var(--color-neutral-500);">Caveo</span></span>
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">2026</dt>
+            <dd style="margin:0;color:var(--color-neutral-200);">{gettext("Senior Backend Engineer")} ·
+            <span style="color:var(--color-neutral-500);">Caveo</span></dd>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2025-26</span><span style="color:var(--color-neutral-200);">{gettext("Backend Engineer (Mid III)")} ·
-            <span style="color:var(--color-neutral-500);">Caveo</span></span>
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">2025-26</dt>
+            <dd style="margin:0;color:var(--color-neutral-200);">{gettext("Backend Engineer (Mid III)")} ·
+            <span style="color:var(--color-neutral-500);">Caveo</span></dd>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2023-25</span><span style="color:var(--color-neutral-200);">{gettext("Backend Engineer")} ·
-            <span style="color:var(--color-neutral-500);">Nextcode</span></span>
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">2023-25</dt>
+            <dd style="margin:0;color:var(--color-neutral-200);">{gettext("Backend Engineer")} ·
+            <span style="color:var(--color-neutral-500);">Nextcode</span></dd>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2021-23</span><span style="color:var(--color-neutral-200);">{gettext("Backend Engineer (Junior)")} ·
-            <span style="color:var(--color-neutral-500);">Nextcode</span></span>
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">2021-23</dt>
+            <dd style="margin:0;color:var(--color-neutral-200);">{gettext("Backend Engineer (Junior)")} ·
+            <span style="color:var(--color-neutral-500);">Nextcode</span></dd>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2018-21</span><span style="color:var(--color-neutral-500);">{gettext("B.Sc. Information Systems, Universidade Anhembi Morumbi")}</span>
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">2018-21</dt>
+            <dd style="margin:0;color:var(--color-neutral-500);">{gettext("B.Sc. Information Systems, Universidade Anhembi Morumbi")}</dd>
           </div>
-        </div>
+        </dl>
         <div style="margin-top:22px;padding:14px;border:1px dashed var(--color-neutral-700);border-radius:var(--radius-sm);">
           <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:8px;">
             {gettext("currently training")}
@@ -282,6 +292,7 @@
         </div>
       </div>
     </div>
+    </main>
 
     <Layouts.site_footer />
   </div>

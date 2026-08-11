@@ -2,10 +2,12 @@
   <div style="max-width:760px;margin:0 auto;">
     <Layouts.site_nav locale={@locale} />
 
+    <main id="main-content">
     <div style="padding:36px 0 0;">
       <a
         :if={"til" in @post.tags}
         href="/til"
+        class="tap-link"
         style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-500);"
       >
         {gettext("← all til")}
@@ -13,6 +15,7 @@
       <a
         :if={"til" not in @post.tags}
         href="/#writing"
+        class="tap-link"
         style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-500);"
       >
         {gettext("← all scrolls")}
@@ -53,7 +56,8 @@
       <a
         :if={translation}
         href={~p"/posts/#{translation.id}"}
-        style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-500);"
+        class="tap-link"
+        style="margin-top:12px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-500);"
       >
         {Sjr.Blog.translation_link_label(translation)}
       </a>
@@ -68,6 +72,7 @@
     >
       {raw(@post.body)}
     </div>
+    </main>
 
     <Layouts.site_footer />
   </div>

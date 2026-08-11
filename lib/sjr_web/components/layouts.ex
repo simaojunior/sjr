@@ -94,7 +94,7 @@ defmodule SjrWeb.Layouts do
 
   def site_nav(assigns) do
     ~H"""
-    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:20px 0 12px;border-bottom:1px solid var(--color-neutral-800);flex-wrap:wrap;">
+    <header style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:20px 0 12px;border-bottom:1px solid var(--color-neutral-800);flex-wrap:wrap;">
       <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
         <a
           href="/"
@@ -106,17 +106,26 @@ defmodule SjrWeb.Layouts do
           {gettext("hidden leaf branch office · est. 2019")}
         </span>
       </div>
-      <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;flex-wrap:wrap;white-space:nowrap;">
-        <a href="/" style="color:var(--color-neutral-100);">{gettext("[home]")}</a>
-        <a href="/#writing">{gettext("[scrolls]")}</a>
-        <a href="/til">{gettext("[til]")}</a>
-        <a href="/#projects">{gettext("[bingo book]")}</a>
-        <a href="/#about">{gettext("[about]")}</a>
-        <a href="/uses">{gettext("[uses]")}</a>
+      <nav
+        aria-label="Primary"
+        style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;flex-wrap:wrap;white-space:nowrap;"
+      >
+        <ul style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;list-style:none;margin:0;padding:0;">
+          <li>
+            <a href="/" class="nav-link" style="color:var(--color-neutral-100);">{gettext("[home]")}</a>
+          </li>
+          <li><a href="/#writing" class="nav-link">{gettext("[scrolls]")}</a></li>
+          <li><a href="/til" class="nav-link">{gettext("[til]")}</a></li>
+          <li><a href="/#projects" class="nav-link">{gettext("[bingo book]")}</a></li>
+          <li><a href="/#about" class="nav-link">{gettext("[about]")}</a></li>
+          <li><a href="/uses" class="nav-link">{gettext("[uses]")}</a></li>
+        </ul>
         <button
           type="button"
           data-locale-toggle
           data-locale={@locale}
+          aria-label={gettext("Switch language")}
+          class="chip-toggle-btn"
           style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:var(--color-neutral-400);border:1px solid var(--color-neutral-700);border-radius:var(--radius-sm);padding:5px 9px;cursor:pointer;"
         >
           {String.upcase(@locale)}
@@ -124,20 +133,20 @@ defmodule SjrWeb.Layouts do
         <button
           type="button"
           data-theme-toggle
-          class="theme-toggle-btn"
+          class="theme-toggle-btn chip-toggle-btn"
           style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:var(--color-neutral-400);border:1px solid var(--color-neutral-700);border-radius:var(--radius-sm);padding:5px 9px;cursor:pointer;"
         >
           {gettext("☾ dark")}
         </button>
-      </div>
-    </div>
+      </nav>
+    </header>
     """
   end
 
   @doc "The site footer: badges, social links, shinobi number. Shared across pages."
   def site_footer(assigns) do
     ~H"""
-    <div style="margin-top:56px;padding-top:20px;border-top:1px solid var(--color-neutral-800);display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end;">
+    <footer style="margin-top:56px;padding-top:20px;border-top:1px solid var(--color-neutral-800);display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end;">
       <div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
           <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-chakra);text-align:center;">
@@ -153,9 +162,16 @@ defmodule SjrWeb.Layouts do
             {gettext("BEST VIEWED")}<br />{gettext("ANY BROWSER")}
           </span>
         </div>
-        <div style="display:flex;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;flex-wrap:wrap;">
-          <a href="https://github.com/simaojunior">github</a><a href="#">bluesky</a><a href="#">linkedin</a><a href="#">rss</a><a href="mailto:simao.msjr@gmail.com">email</a>
-        </div>
+        <ul
+          aria-label={gettext("Elsewhere")}
+          style="display:flex;gap:10px;flex-wrap:wrap;list-style:none;margin:0;padding:0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;"
+        >
+          <li><a href="https://github.com/simaojunior" class="footer-link">github</a></li>
+          <li><span class="footer-link-disabled">bluesky</span></li>
+          <li><span class="footer-link-disabled">linkedin</span></li>
+          <li><span class="footer-link-disabled">rss</span></li>
+          <li><a href="mailto:simao.msjr@gmail.com" class="footer-link">email</a></li>
+        </ul>
       </div>
       <div style="margin-left:auto;text-align:right;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);line-height:1.9;">
         <div>
@@ -168,11 +184,11 @@ defmodule SjrWeb.Layouts do
           </span>
         </div>
         <div>
-          {gettext("member of the")} <a href="#">{gettext("webring")}</a> · <a href="#">{gettext("← prev")}</a> · <a href="#">{gettext("next →")}</a>
+          {gettext("member of the")} <span class="footer-link-disabled">{gettext("webring")}</span> · <span class="footer-link-disabled">{gettext("← prev")}</span> · <span class="footer-link-disabled">{gettext("next →")}</span>
         </div>
         <div>© {current_year()} Simão Júnior · {gettext("no cookies, no trackers, no popups")}</div>
       </div>
-    </div>
+    </footer>
     """
   end
 
