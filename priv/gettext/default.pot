@@ -47,7 +47,7 @@ msgstr ""
 msgid "AI-powered video transcription for professional translators. Upload a video, get back a timestamped transcript ready to translate."
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:162
+#: lib/sjr_web/components/layouts.ex:172
 #, elixir-autogen, elixir-format
 msgid "ANY BROWSER"
 msgstr ""
@@ -73,7 +73,7 @@ msgstr ""
 msgid "B.Sc. Information Systems, Universidade Anhembi Morumbi"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:162
+#: lib/sjr_web/components/layouts.ex:172
 #, elixir-autogen, elixir-format
 msgid "BEST VIEWED"
 msgstr ""
@@ -119,12 +119,12 @@ msgstr ""
 msgid "Every post here started as an explanation I owed someone on my team."
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:159
+#: lib/sjr_web/components/layouts.ex:169
 #, elixir-autogen, elixir-format
 msgid "FOREVER"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:153
+#: lib/sjr_web/components/layouts.ex:163
 #, elixir-autogen, elixir-format
 msgid "HAND CODED"
 msgstr ""
@@ -144,7 +144,7 @@ msgstr ""
 msgid "Mission log"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:153
+#: lib/sjr_web/components/layouts.ex:163
 #, elixir-autogen, elixir-format
 msgid "NO BUILD STEP"
 msgstr ""
@@ -209,7 +209,7 @@ msgstr ""
 msgid "TBD"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:159
+#: lib/sjr_web/components/layouts.ex:169
 #, elixir-autogen, elixir-format
 msgid "TEAM 7"
 msgstr ""
@@ -249,7 +249,7 @@ msgstr ""
 msgid "What's actually in the pouch, not what's aspirational. Updated when something changes, not on a schedule."
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:156
+#: lib/sjr_web/components/layouts.ex:166
 #, elixir-autogen, elixir-format
 msgid "YES REALLY"
 msgstr ""
@@ -355,12 +355,12 @@ msgstr ""
 msgid "konoha shinobi · reg. 012-607"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:187
+#: lib/sjr_web/components/layouts.ex:197
 #, elixir-autogen, elixir-format
 msgid "member of the"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:187
+#: lib/sjr_web/components/layouts.ex:197
 #, elixir-autogen, elixir-format
 msgid "next →"
 msgstr ""
@@ -375,7 +375,7 @@ msgstr ""
 msgid "ninja tool pouch"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:189
+#: lib/sjr_web/components/layouts.ex:199
 #, elixir-autogen, elixir-format
 msgid "no cookies, no trackers, no popups"
 msgstr ""
@@ -436,17 +436,17 @@ msgstr ""
 msgid "village"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:180
+#: lib/sjr_web/components/layouts.ex:190
 #, elixir-autogen, elixir-format
 msgid "visitor count, persisted on a Fly volume"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:187
+#: lib/sjr_web/components/layouts.ex:197
 #, elixir-autogen, elixir-format
 msgid "webring"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:178
+#: lib/sjr_web/components/layouts.ex:188
 #, elixir-autogen, elixir-format
 msgid "you are shinobi no."
 msgstr ""
@@ -461,12 +461,12 @@ msgstr ""
 msgid "← all til"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:187
+#: lib/sjr_web/components/layouts.ex:197
 #, elixir-autogen, elixir-format
 msgid "← prev"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:139
+#: lib/sjr_web/components/layouts.ex:149
 #, elixir-autogen, elixir-format
 msgid "☾ dark"
 msgstr ""
@@ -476,7 +476,7 @@ msgstr ""
 msgid "✧ status: shipping day to day %{nbsp}·%{nbsp} ✧ training: Elixir, OTP supervision trees %{nbsp}·%{nbsp} ✧ site running on Phoenix + Fly.io %{nbsp}·%{nbsp} ✧ rewatching Shippuden, arc 14 %{nbsp}·%{nbsp} ✧ last updated %{date} %{nbsp}·%{nbsp}%{nbsp}"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:166
+#: lib/sjr_web/components/layouts.ex:176
 #, elixir-autogen, elixir-format
 msgid "Elsewhere"
 msgstr ""
@@ -486,7 +486,17 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:127
+#: lib/sjr_web/components/layouts.ex:137
 #, elixir-autogen, elixir-format
 msgid "Switch language"
+msgstr ""
+
+#: lib/sjr_web/components/layouts.ex:127
+#, elixir-autogen, elixir-format
+msgid "Download CV (PDF)"
+msgstr ""
+
+#: lib/sjr_web/components/layouts.ex:129
+#, elixir-autogen, elixir-format
+msgid "[cv]"
 msgstr ""

@@ -119,6 +119,16 @@ defmodule SjrWeb.Layouts do
           <li><a href="/#projects" class="nav-link">{gettext("[bingo book]")}</a></li>
           <li><a href="/#about" class="nav-link">{gettext("[about]")}</a></li>
           <li><a href="/uses" class="nav-link">{gettext("[uses]")}</a></li>
+          <li>
+            <a
+              href={cv_path(@locale)}
+              download
+              class="nav-link"
+              aria-label={gettext("Download CV (PDF)")}
+            >
+              {gettext("[cv]")}
+            </a>
+          </li>
         </ul>
         <button
           type="button"
@@ -191,6 +201,9 @@ defmodule SjrWeb.Layouts do
     </footer>
     """
   end
+
+  defp cv_path("pt-br"), do: ~p"/files/simao-junior-cv-pt-br.pdf"
+  defp cv_path(_locale), do: ~p"/files/simao-junior-cv-en.pdf"
 
   defp current_year, do: Date.utc_today().year
 
