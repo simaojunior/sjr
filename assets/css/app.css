@@ -189,6 +189,7 @@ a:hover { color: var(--color-accent-200); text-decoration: underline; }
   display: inline-flex; align-items: center; min-height: 44px; padding: 4px 2px;
 }
 .footer-link-disabled { color: var(--color-neutral-600); cursor: default; }
+.nav-link:hover, .btn:hover, .tap-link:hover, .footer-link:hover { text-decoration: none; }
 .mission-row { transition: background 0.15s ease; }
 .mission-row:hover { background: var(--color-neutral-900); text-decoration: none; }
 .mission-row:active { background: var(--color-neutral-800); }
