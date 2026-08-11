@@ -4,13 +4,18 @@
   const LABELS = isPtBr
     ? { dark: "☾ escuro", light: "☀ claro" }
     : { dark: "☾ dark", light: "☀ light" };
+  const ACTION_LABELS = isPtBr
+    ? { dark: "Mudar para tema claro", light: "Mudar para tema escuro" }
+    : { dark: "Switch to light theme", light: "Switch to dark theme" };
 
   const currentTheme = () =>
     document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
 
   const syncToggleLabel = (theme) => {
     const toggle = document.querySelector("[data-theme-toggle]");
-    if (toggle) toggle.textContent = LABELS[theme];
+    if (!toggle) return;
+    toggle.textContent = LABELS[theme];
+    toggle.setAttribute("aria-label", ACTION_LABELS[theme]);
   };
 
   syncToggleLabel(currentTheme());
