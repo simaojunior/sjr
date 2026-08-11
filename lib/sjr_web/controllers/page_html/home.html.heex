@@ -4,12 +4,12 @@
 
     <div style="margin-top:12px;background:var(--color-accent-900);border:1px solid var(--color-accent-800);border-radius:var(--radius-sm);overflow:hidden;display:flex;align-items:center;">
       <div style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-right:1px solid var(--color-accent-800);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;color:var(--color-accent-300);flex:none;">
-        <span style="width:7px;height:7px;border-radius:50%;background:var(--color-chakra);animation:blink 1.4s steps(1,end) infinite;"></span>MISSION BOARD
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--color-chakra);animation:blink 1.4s steps(1,end) infinite;"></span>{gettext("MISSION BOARD")}
       </div>
       <div style="overflow:hidden;flex:1;">
         <div style="display:flex;white-space:nowrap;width:max-content;animation:marquee 34s linear infinite;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-400);">
-          <span style="padding:9px 0;">✧ status: shipping day to day &nbsp;·&nbsp; ✧ training: Elixir, OTP supervision trees &nbsp;·&nbsp; ✧ site running on Phoenix + Fly.io &nbsp;·&nbsp; ✧ rewatching Shippuden, arc 14 &nbsp;·&nbsp; ✧ last updated {last_updated_label()} &nbsp;·&nbsp;&nbsp;</span>
-          <span style="padding:9px 0;">✧ status: shipping day to day &nbsp;·&nbsp; ✧ training: Elixir, OTP supervision trees &nbsp;·&nbsp; ✧ site running on Phoenix + Fly.io &nbsp;·&nbsp; ✧ rewatching Shippuden, arc 14 &nbsp;·&nbsp; ✧ last updated {last_updated_label()} &nbsp;·&nbsp;&nbsp;</span>
+          <span style="padding:9px 0;">{ticker_text()}</span>
+          <span style="padding:9px 0;">{ticker_text()}</span>
         </div>
       </div>
     </div>
@@ -18,62 +18,66 @@
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
           <span style="display:block;height:9px;width:52px;border-radius:2px;background:linear-gradient(180deg,var(--color-neutral-400),var(--color-neutral-700));"></span>
-          <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);">konoha shinobi · reg. 012-607</span>
+          <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);">{gettext("konoha shinobi · reg. 012-607")}</span>
         </div>
         <h1 style="font-family:var(--font-heading);font-weight:500;font-size:clamp(38px,7vw,58px);line-height:1.02;letter-spacing:-0.03em;margin:0 0 18px;color:var(--color-neutral-100);">
           Simão Júnior
         </h1>
         <p style="font-size:19px;line-height:1.6;color:var(--color-neutral-300);margin:0 0 14px;max-width:46ch;text-wrap:pretty;">
-          Senior backend engineer with 5+ years building critical, scalable systems for high-availability environments: Node.js, TypeScript, Elixir, Postgres, event-driven architectures on AWS.
+          {gettext(
+            "Senior backend engineer with 5+ years building critical, scalable systems for high-availability environments: Node.js, TypeScript, Elixir, Postgres, event-driven architectures on AWS."
+          )}
         </p>
         <p style="font-size:16px;line-height:1.7;color:var(--color-neutral-400);margin:0 0 26px;max-width:52ch;text-wrap:pretty;">
-          Self-taught, still training. This site is the slow internet: notes I actually finished, projects that are still running, and a shrine to a ninja cartoon I have not grown out of.
+          {gettext(
+            "Self-taught, still training. This site is the slow internet: notes I actually finished, projects that are still running, and a shrine to a ninja cartoon I have not grown out of."
+          )}
         </p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="#writing">Read the scrolls</a>
-          <a class="btn btn-ghost" href="#projects">Bingo book</a>
-          <a class="btn btn-ghost" href="mailto:simao.msjr@gmail.com">Send a summon</a>
+          <a class="btn btn-primary" href="#writing">{gettext("Read the scrolls")}</a>
+          <a class="btn btn-ghost" href="#projects">{gettext("Bingo book")}</a>
+          <a class="btn btn-ghost" href="mailto:simao.msjr@gmail.com">{gettext("Send a summon")}</a>
         </div>
       </div>
 
       <div style="border:1px solid var(--color-neutral-800);border-radius:var(--radius-md);background:var(--color-surface);overflow:hidden;box-shadow:var(--shadow-sm);">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;background:var(--color-neutral-900);border-bottom:1px solid var(--color-neutral-800);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-400);">
-          <span>ninja registration card</span>
+          <span>{gettext("ninja registration card")}</span>
           <span style="border:1px solid var(--color-chakra-dim);color:var(--color-chakra);padding:1px 6px;border-radius:2px;letter-spacing:0.1em;white-space:nowrap;">A-RANK</span>
         </div>
         <div style="display:grid;grid-template-columns:auto minmax(0,1fr);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
           <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
-            village
+            {gettext("village")}
           </div>
           <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
             São Paulo, BR · UTC-3
           </div>
           <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
-            rank
+            {gettext("rank")}
           </div>
           <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
-            Jōnin · backend
+            {gettext("Jōnin · backend")}
           </div>
           <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
-            affinity
+            {gettext("affinity")}
           </div>
           <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
-            Onboarding &amp; KYC systems, event-driven architecture
+            {gettext("Onboarding & KYC systems, event-driven architecture")}
           </div>
           <div style="padding:9px 12px;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
-            squad
+            {gettext("squad")}
           </div>
           <div style="padding:9px 12px;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
-            Caveo · backend (hybrid)
+            {gettext("Caveo · backend (hybrid)")}
           </div>
-          <div style="padding:9px 12px;color:var(--color-neutral-600);">status</div>
+          <div style="padding:9px 12px;color:var(--color-neutral-600);">{gettext("status")}</div>
           <div style="padding:9px 12px;color:var(--color-leaf-light);">
-            active duty · open to interesting missions
+            {gettext("active duty · open to interesting missions")}
           </div>
         </div>
         <div style="padding:12px;border-top:1px solid var(--color-neutral-800);">
           <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:8px;">
-            jutsu registry
+            {gettext("jutsu registry")}
           </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;">
             <span class="tag tag-accent">Elixir</span>
@@ -90,9 +94,9 @@
     <div id="writing" style="padding:52px 0 0;">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--color-neutral-800);padding-bottom:10px;margin-bottom:6px;flex-wrap:wrap;">
         <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0;color:var(--color-neutral-100);">
-          Mission log
+          {gettext("Mission log")}
         </h2>
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);">all {@total_posts} scrolls</span>
+        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);">{gettext("all %{count} scrolls", count: @total_posts)}</span>
       </div>
 
       <a
@@ -106,9 +110,11 @@
           <span style="display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;">{post.title}</span>
           <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">{post.description}</span>
         </span>
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-chakra);white-space:nowrap;">{Sjr.Blog.rank(
-          post
-        )} · {Sjr.Blog.reading_time_minutes(post)} min</span>
+        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-chakra);white-space:nowrap;">{gettext(
+          "%{rank} · %{minutes} min",
+          rank: Sjr.Blog.rank(post),
+          minutes: Sjr.Blog.reading_time_minutes(post)
+        )}</span>
       </a>
 
       <a
@@ -117,21 +123,21 @@
         class="mission-row"
         style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;opacity:0.55;"
       >
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">TBD</span>
+        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">{gettext("TBD")}</span>
         <span>
           <span style="display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;">{post.title}</span>
-          <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">coming soon</span>
+          <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">{gettext("coming soon")}</span>
         </span>
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);white-space:nowrap;">queued</span>
+        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);white-space:nowrap;">{gettext("queued")}</span>
       </a>
     </div>
 
     <div id="projects" style="padding:52px 0 0;">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--color-neutral-800);padding-bottom:10px;margin-bottom:20px;flex-wrap:wrap;">
         <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0;color:var(--color-neutral-100);">
-          Bingo book
+          {gettext("Bingo book")}
         </h2>
-        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);">4 active · 0 rogue (for once)</span>
+        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);">{gettext("4 active · 0 rogue (for once)")}</span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px;">
         <a
@@ -139,10 +145,12 @@
           class="card"
           style="display:flex;flex-direction:column;gap:8px;color:inherit;"
         >
-          <div class="card-kicker">open source · Rust</div>
+          <div class="card-kicker">{gettext("open source · Rust")}</div>
           <div class="card-title">Katu</div>
           <div class="card-body">
-            A minimalist terminal multiplexer with first-class AI context. Sessions survive disconnects, and each one exposes its own context file so your AI assistant knows what you're doing.
+            {gettext(
+              "A minimalist terminal multiplexer with first-class AI context. Sessions survive disconnects, and each one exposes its own context file so your AI assistant knows what you're doing."
+            )}
           </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;">
             <span class="tag tag-outline">Rust</span><span class="tag tag-outline">CLI</span>
@@ -153,30 +161,36 @@
           class="card"
           style="display:flex;flex-direction:column;gap:8px;color:inherit;"
         >
-          <div class="card-kicker">building now</div>
+          <div class="card-kicker">{gettext("building now")}</div>
           <div class="card-title">Lumoki</div>
           <div class="card-body">
-            A mental health companion app built around a persistent virtual companion, daily check-ins, and evidence-based practices. No streak guilt.
+            {gettext(
+              "A mental health companion app built around a persistent virtual companion, daily check-ins, and evidence-based practices. No streak guilt."
+            )}
           </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;">
             <span class="tag tag-outline">TypeScript</span><span class="tag tag-outline">Expo</span>
           </div>
         </a>
         <div class="card" style="display:flex;flex-direction:column;gap:8px;">
-          <div class="card-kicker">private · SaaS</div>
+          <div class="card-kicker">{gettext("private · SaaS")}</div>
           <div class="card-title">Traduzar</div>
           <div class="card-body">
-            AI-powered video transcription for professional translators. Upload a video, get back a timestamped transcript ready to translate.
+            {gettext(
+              "AI-powered video transcription for professional translators. Upload a video, get back a timestamped transcript ready to translate."
+            )}
           </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;">
             <span class="tag tag-outline">Phoenix</span><span class="tag tag-outline">Whisper</span>
           </div>
         </div>
         <div class="card" style="display:flex;flex-direction:column;gap:8px;">
-          <div class="card-kicker">private · side project</div>
+          <div class="card-kicker">{gettext("private · side project")}</div>
           <div class="card-title">GrãoFin</div>
           <div class="card-body">
-            A personal finance command center built around the 50/30/20 method: budgets, savings goals, and trends in one place.
+            {gettext(
+              "A personal finance command center built around the 50/30/20 method: budgets, savings goals, and trends in one place."
+            )}
           </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;">
             <span class="tag tag-outline">Phoenix</span><span class="tag tag-outline">SvelteKit</span>
@@ -187,10 +201,12 @@
 
     <div style="margin:52px 0 0;padding:26px 24px;border-radius:var(--radius-md);background:linear-gradient(140deg,var(--color-section),var(--color-section-glow));border:1px solid var(--color-section-ghost);">
       <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);margin-bottom:10px;">
-        forbidden scroll · my ninja way
+        {gettext("forbidden scroll · my ninja way")}
       </div>
       <p style="font-family:var(--font-heading);font-weight:500;font-size:clamp(20px,3.4vw,28px);line-height:1.35;letter-spacing:-0.02em;color:#eef0e6;margin:0;max-width:44ch;text-wrap:pretty;">
-        Ship the version you can explain at 3am. Then teach it to someone else, or you never really learned it.
+        {gettext(
+          "Ship the version you can explain at 3am. Then teach it to someone else, or you never really learned it."
+        )}
       </p>
     </div>
 
@@ -200,68 +216,68 @@
     >
       <div>
         <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0 0 14px;color:var(--color-neutral-100);">
-          Three rules
+          {gettext("Three rules")}
         </h2>
         <div style="display:flex;flex-direction:column;gap:14px;">
           <div style="border-left:2px solid var(--color-accent-700);padding-left:14px;">
             <div style="font-size:15px;color:var(--color-neutral-100);margin-bottom:3px;">
-              Boring on purpose
+              {gettext("Boring on purpose")}
             </div>
             <div style="font-size:14px;line-height:1.6;color:var(--color-neutral-500);">
-              The clever solution is the one you get paged about.
+              {gettext("The clever solution is the one you get paged about.")}
             </div>
           </div>
           <div style="border-left:2px solid var(--color-accent-700);padding-left:14px;">
             <div style="font-size:15px;color:var(--color-neutral-100);margin-bottom:3px;">
-              Teach it or you don't know it
+              {gettext("Teach it or you don't know it")}
             </div>
             <div style="font-size:14px;line-height:1.6;color:var(--color-neutral-500);">
-              Every post here started as an explanation I owed someone on my team.
+              {gettext("Every post here started as an explanation I owed someone on my team.")}
             </div>
           </div>
           <div style="border-left:2px solid var(--color-accent-700);padding-left:14px;">
             <div style="font-size:15px;color:var(--color-neutral-100);margin-bottom:3px;">
-              Never go back on your word
+              {gettext("Never go back on your word")}
             </div>
             <div style="font-size:14px;line-height:1.6;color:var(--color-neutral-500);">
-              Borrowed from a certain orange idiot. It still holds up for estimates.
+              {gettext("Borrowed from a certain orange idiot. It still holds up for estimates.")}
             </div>
           </div>
         </div>
       </div>
       <div>
         <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0 0 14px;color:var(--color-neutral-100);">
-          Academy record
+          {gettext("Academy record")}
         </h2>
         <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2026</span><span style="color:var(--color-neutral-200);">Senior Backend Engineer ·
+            <span style="color:var(--color-neutral-600);white-space:nowrap;">2026</span><span style="color:var(--color-neutral-200);">{gettext("Senior Backend Engineer")} ·
             <span style="color:var(--color-neutral-500);">Caveo</span></span>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2025-26</span><span style="color:var(--color-neutral-200);">Backend Engineer (Mid III) ·
+            <span style="color:var(--color-neutral-600);white-space:nowrap;">2025-26</span><span style="color:var(--color-neutral-200);">{gettext("Backend Engineer (Mid III)")} ·
             <span style="color:var(--color-neutral-500);">Caveo</span></span>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2023-25</span><span style="color:var(--color-neutral-200);">Backend Engineer ·
+            <span style="color:var(--color-neutral-600);white-space:nowrap;">2023-25</span><span style="color:var(--color-neutral-200);">{gettext("Backend Engineer")} ·
             <span style="color:var(--color-neutral-500);">Nextcode</span></span>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2021-23</span><span style="color:var(--color-neutral-200);">Backend Engineer (Junior) ·
+            <span style="color:var(--color-neutral-600);white-space:nowrap;">2021-23</span><span style="color:var(--color-neutral-200);">{gettext("Backend Engineer (Junior)")} ·
             <span style="color:var(--color-neutral-500);">Nextcode</span></span>
           </div>
           <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;">
-            <span style="color:var(--color-neutral-600);white-space:nowrap;">2018-21</span><span style="color:var(--color-neutral-500);">B.Sc. Information Systems, Universidade Anhembi Morumbi</span>
+            <span style="color:var(--color-neutral-600);white-space:nowrap;">2018-21</span><span style="color:var(--color-neutral-500);">{gettext("B.Sc. Information Systems, Universidade Anhembi Morumbi")}</span>
           </div>
         </div>
         <div style="margin-top:22px;padding:14px;border:1px dashed var(--color-neutral-700);border-radius:var(--radius-sm);">
           <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:8px;">
-            currently training
+            {gettext("currently training")}
           </div>
           <div style="font-size:14px;line-height:1.7;color:var(--color-neutral-400);">
-            Reading
+            {gettext("Reading")}
             <span style="color:var(--color-neutral-200);">Designing Data-Intensive Applications</span>
-            (third attempt) · learning Elixir · rewatching Shippuden for the arc where nothing happens
+            {gettext("(third attempt) · learning Elixir · rewatching Shippuden for the arc where nothing happens")}
           </div>
         </div>
       </div>

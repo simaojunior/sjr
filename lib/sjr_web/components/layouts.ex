@@ -103,16 +103,16 @@ defmodule SjrWeb.Layouts do
           simaojunior<span style="color:var(--color-accent);">.dev</span>
         </a>
         <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);">
-          hidden leaf branch office · est. 2019
+          {gettext("hidden leaf branch office · est. 2019")}
         </span>
       </div>
       <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;flex-wrap:wrap;white-space:nowrap;">
-        <a href="/" style="color:var(--color-neutral-100);">[home]</a>
-        <a href="/#writing">[scrolls]</a>
-        <a href="/til">[til]</a>
-        <a href="/#projects">[bingo book]</a>
-        <a href="/#about">[about]</a>
-        <a href="/uses">[uses]</a>
+        <a href="/" style="color:var(--color-neutral-100);">{gettext("[home]")}</a>
+        <a href="/#writing">{gettext("[scrolls]")}</a>
+        <a href="/til">{gettext("[til]")}</a>
+        <a href="/#projects">{gettext("[bingo book]")}</a>
+        <a href="/#about">{gettext("[about]")}</a>
+        <a href="/uses">{gettext("[uses]")}</a>
         <button
           type="button"
           data-locale-toggle
@@ -127,7 +127,7 @@ defmodule SjrWeb.Layouts do
           class="theme-toggle-btn"
           style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:var(--color-neutral-400);border:1px solid var(--color-neutral-700);border-radius:var(--radius-sm);padding:5px 9px;cursor:pointer;"
         >
-          ☾ dark
+          {gettext("☾ dark")}
         </button>
       </div>
     </div>
@@ -141,16 +141,16 @@ defmodule SjrWeb.Layouts do
       <div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
           <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-chakra);text-align:center;">
-            HAND CODED<br />NO BUILD STEP
+            {gettext("HAND CODED")}<br />{gettext("NO BUILD STEP")}
           </span>
           <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-neutral-400);text-align:center;">
-            RSS<br />YES REALLY
+            RSS<br />{gettext("YES REALLY")}
           </span>
           <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-neutral-400);text-align:center;">
-            TEAM 7<br />FOREVER
+            {gettext("TEAM 7")}<br />{gettext("FOREVER")}
           </span>
           <span style="display:inline-flex;align-items:center;justify-content:center;width:88px;height:31px;border:1px solid var(--color-neutral-700);background:var(--color-neutral-900);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:0.05em;color:var(--color-neutral-400);text-align:center;">
-            BEST VIEWED<br />ANY BROWSER
+            {gettext("BEST VIEWED")}<br />{gettext("ANY BROWSER")}
           </span>
         </div>
         <div style="display:flex;gap:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;flex-wrap:wrap;">
@@ -159,18 +159,18 @@ defmodule SjrWeb.Layouts do
       </div>
       <div style="margin-left:auto;text-align:right;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);line-height:1.9;">
         <div>
-          you are shinobi no.
+          {gettext("you are shinobi no.")}
           <span
-            title="visitor count, persisted on a Fly volume"
+            title={gettext("visitor count, persisted on a Fly volume")}
             style="display:inline-block;padding:2px 6px;background:var(--color-neutral-900);border:1px solid var(--color-neutral-800);color:var(--color-chakra);letter-spacing:0.22em;"
           >
             {visitor_number()}
           </span>
         </div>
         <div>
-          member of the <a href="#">webring</a> · <a href="#">← prev</a> · <a href="#">next →</a>
+          {gettext("member of the")} <a href="#">{gettext("webring")}</a> · <a href="#">{gettext("← prev")}</a> · <a href="#">{gettext("next →")}</a>
         </div>
-        <div>© {current_year()} Simão Júnior · no cookies, no trackers, no popups</div>
+        <div>© {current_year()} Simão Júnior · {gettext("no cookies, no trackers, no popups")}</div>
       </div>
     </div>
     """

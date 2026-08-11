@@ -1,6 +1,9 @@
 (() => {
   const STORAGE_KEY = "sj-theme";
-  const LABELS = { dark: "☾ dark", light: "☀ light" };
+  const isPtBr = document.documentElement.lang === "pt-BR";
+  const LABELS = isPtBr
+    ? { dark: "☾ escuro", light: "☀ claro" }
+    : { dark: "☾ dark", light: "☀ light" };
 
   const currentTheme = () =>
     document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
@@ -48,7 +51,7 @@
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "copy-btn";
-    btn.setAttribute("aria-label", "Copy code");
+    btn.setAttribute("aria-label", isPtBr ? "Copiar código" : "Copy code");
     btn.innerHTML = COPY_ICON;
 
     btn.addEventListener("click", () => {

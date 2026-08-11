@@ -9,4 +9,14 @@ defmodule SjrWeb.PageHTML do
   embed_templates "page_html/*"
 
   def last_updated_label, do: Calendar.strftime(Date.utc_today(), "%-d %b %Y")
+
+  def ticker_text do
+    nbsp = " "
+
+    gettext(
+      "✧ status: shipping day to day %{nbsp}·%{nbsp} ✧ training: Elixir, OTP supervision trees %{nbsp}·%{nbsp} ✧ site running on Phoenix + Fly.io %{nbsp}·%{nbsp} ✧ rewatching Shippuden, arc 14 %{nbsp}·%{nbsp} ✧ last updated %{date} %{nbsp}·%{nbsp}%{nbsp}",
+      nbsp: nbsp,
+      date: last_updated_label()
+    )
+  end
 end

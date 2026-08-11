@@ -18,6 +18,6 @@ defmodule SjrWeb.PageController do
   end
 
   def uses(conn, _params) do
-    render(conn, :uses, page_title: "Uses")
+    render(conn, :uses, page_title: gettext("Uses"))
   end
 end

@@ -4,13 +4,13 @@
 
     <div style="padding:36px 0 28px;border-bottom:1px solid var(--color-neutral-800);">
       <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);margin-bottom:10px;">
-        field notes
+        {gettext("field notes")}
       </div>
       <h1 style="font-family:var(--font-heading);font-weight:500;font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-0.02em;margin:0 0 10px;color:var(--color-neutral-100);">
         TIL
       </h1>
       <p style="font-size:15px;line-height:1.6;color:var(--color-neutral-400);margin:0;max-width:52ch;">
-        Today I learned: small, quick notes that didn't earn a full scroll.
+        {gettext("Today I learned: small, quick notes that didn't earn a full scroll.")}
       </p>
     </div>
 
@@ -32,7 +32,7 @@
         :if={@posts == []}
         style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--color-neutral-600);padding:16px 8px;"
       >
-        nothing logged yet
+        {gettext("nothing logged yet")}
       </p>
     </div>
 

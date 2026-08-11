@@ -17,8 +17,15 @@ defmodule SjrWeb.Plugs.Locale do
   def call(conn, _opts) do
     conn = fetch_cookies(conn)
     locale = conn.req_cookies[@cookie] || locale_from_header(conn)
-    assign(conn, :locale, if(locale in @supported, do: locale, else: "en"))
+    locale = if locale in @supported, do: locale, else: "en"
+
+    Gettext.put_locale(SjrWeb.Gettext, gettext_locale(locale))
+
+    assign(conn, :locale, locale)
   end
+
+  defp gettext_locale("pt-br"), do: "pt_BR"
+  defp gettext_locale(locale), do: locale
 
   defp locale_from_header(conn) do
     case get_req_header(conn, "accept-language") do
