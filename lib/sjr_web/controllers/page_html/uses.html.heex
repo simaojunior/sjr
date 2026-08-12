@@ -3,40 +3,54 @@
     <Layouts.site_nav locale={@locale} />
 
     <main id="main-content">
-    <div style="padding:36px 0 28px;border-bottom:1px solid var(--color-neutral-800);">
-      <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);margin-bottom:10px;">
-        {gettext("ninja tool pouch")}
+      <div style="padding:36px 0 28px;border-bottom:1px solid var(--color-neutral-800);">
+        <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);margin-bottom:10px;">
+          {gettext("ninja tool pouch")}
+        </div>
+        <h1 style="font-family:var(--font-heading);font-weight:500;font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-0.02em;margin:0 0 10px;color:var(--color-neutral-100);">
+          Uses
+        </h1>
+        <p style="font-size:15px;line-height:1.6;color:var(--color-neutral-400);margin:0;max-width:52ch;">
+          {gettext(
+            "What's actually in the pouch, not what's aspirational. Updated when something changes, not on a schedule."
+          )}
+        </p>
       </div>
-      <h1 style="font-family:var(--font-heading);font-weight:500;font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-0.02em;margin:0 0 10px;color:var(--color-neutral-100);">
-        Uses
-      </h1>
-      <p style="font-size:15px;line-height:1.6;color:var(--color-neutral-400);margin:0;max-width:52ch;">
-        {gettext("What's actually in the pouch, not what's aspirational. Updated when something changes, not on a schedule.")}
-      </p>
-    </div>
 
-    <dl style="margin:0;padding:32px 0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
-      <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("editor")}</dt>
-        <dd style="margin:0;color:var(--color-neutral-200);">Neovim</dd>
-      </div>
-      <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("terminal")}</dt>
-        <dd style="margin:0;color:var(--color-neutral-200);">WezTerm / Ghostty</dd>
-      </div>
-      <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("shell")}</dt>
-        <dd style="margin:0;color:var(--color-neutral-200);">fish / Nushell</dd>
-      </div>
-      <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
-        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">os</dt>
-        <dd style="margin:0;color:var(--color-neutral-200);">{gettext("NixOS (I use NixOS BTW)")}</dd>
-      </div>
-      <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;">
-        <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("ai pair")}</dt>
-        <dd style="margin:0;color:var(--color-neutral-200);">Claude Code CLI</dd>
-      </div>
-    </dl>
+      <dl style="margin:0;padding:32px 0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
+          <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">
+            {gettext("editor")}
+          </dt>
+          <dd style="margin:0;color:var(--color-neutral-200);">Neovim</dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
+          <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">
+            {gettext("terminal")}
+          </dt>
+          <dd style="margin:0;color:var(--color-neutral-200);">WezTerm / Ghostty</dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
+          <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">
+            {gettext("shell")}
+          </dt>
+          <dd style="margin:0;color:var(--color-neutral-200);">fish / Nushell</dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--color-neutral-800);">
+          <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">
+            os
+          </dt>
+          <dd style="margin:0;color:var(--color-neutral-200);">
+            {gettext("NixOS (I use NixOS BTW)")}
+          </dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:12px 0;">
+          <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">
+            {gettext("ai pair")}
+          </dt>
+          <dd style="margin:0;color:var(--color-neutral-200);">Claude Code CLI</dd>
+        </div>
+      </dl>
     </main>
 
     <Layouts.site_footer />

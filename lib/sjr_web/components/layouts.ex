@@ -189,7 +189,9 @@ defmodule SjrWeb.Layouts do
           </span>
         </div>
         <div>
-          {gettext("member of the")} <span class="footer-link-disabled">{gettext("webring")}</span> · <span class="footer-link-disabled">{gettext("← prev")}</span> · <span class="footer-link-disabled">{gettext("next →")}</span>
+          {gettext("member of the")} <span class="footer-link-disabled">{gettext("webring")}</span>
+          · <span class="footer-link-disabled">{gettext("← prev")}</span>
+          · <span class="footer-link-disabled">{gettext("next →")}</span>
         </div>
         <div>© {current_year()} Simão Júnior · {gettext("no cookies, no trackers, no popups")}</div>
       </div>
