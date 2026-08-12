@@ -29,8 +29,14 @@ defmodule SjrWeb.Plugs.Locale do
 
   defp locale_from_header(conn) do
     case get_req_header(conn, "accept-language") do
-      [header | _] -> header |> String.split(",") |> List.first() |> parse_tag()
-      [] -> "en"
+      [header | _] ->
+        header
+        |> String.split(",")
+        |> List.first()
+        |> parse_tag()
+
+      [] ->
+        "en"
     end
   end
 
