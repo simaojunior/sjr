@@ -20,4 +20,8 @@ defmodule SjrWeb.PageController do
   def uses(conn, _params) do
     render(conn, :uses, page_title: gettext("Uses"))
   end
+
+  def cv(conn, _params) do
+    render(conn, :cv, page_title: gettext("CV"))
+  end
 end

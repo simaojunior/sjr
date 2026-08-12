@@ -1,0 +1,221 @@
+<div style="min-height:100%;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);padding:0 20px 64px;">
+  <div style="max-width:760px;margin:0 auto;">
+    <Layouts.site_nav locale={@locale} />
+
+    <main id="main-content">
+    <div style="padding:36px 0 28px;border-bottom:1px solid var(--color-neutral-800);">
+      <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-chakra);margin-bottom:10px;">
+        {gettext("classified · bingo book entry · do not engage without coffee")}
+      </div>
+      <h1 style="font-family:var(--font-heading);font-weight:500;font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-0.02em;margin:0 0 10px;color:var(--color-neutral-100);">
+        {gettext("Ninja report")}
+      </h1>
+      <p style="font-size:15px;line-height:1.6;color:var(--color-neutral-400);margin:0 0 18px;max-width:52ch;">
+        {gettext("The official record the village keeps on me: missions completed, jutsu mastered, and the academy I barely survived. The paper version exists too.")}
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="btn btn-primary" href={cv_path(@locale)} download>{gettext("Download scroll (PDF)")}</a>
+        <a class="btn btn-ghost" href="mailto:simao.msjr@gmail.com">{gettext("Send a summon")}</a>
+      </div>
+    </div>
+
+    <div style="padding:32px 0 0;">
+      <div style="border:1px solid var(--color-neutral-800);border-radius:var(--radius-md);background:var(--color-surface);overflow:hidden;box-shadow:var(--shadow-sm);">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;background:var(--color-neutral-900);border-bottom:1px solid var(--color-neutral-800);font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-400);">
+          <span>{gettext("ninja registration card")}</span>
+          <span style="border:1px solid var(--color-chakra-dim);color:var(--color-chakra);padding:1px 6px;border-radius:2px;letter-spacing:0.1em;white-space:nowrap;">A-RANK</span>
+        </div>
+        <dl style="display:grid;grid-template-columns:auto minmax(0,1fr);margin:0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+            {gettext("name")}
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+            Simão Júnior · {gettext("reg. 012-607")}
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+            {gettext("village")}
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+            São Paulo, BR · UTC-3
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+            {gettext("rank")}
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+            {gettext("Jōnin · senior backend engineer")}
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
+            {gettext("contact")}
+          </dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
+            <a href="mailto:simao.msjr@gmail.com" style="color:inherit;">simao.msjr@gmail.com</a>
+            · <a href="https://github.com/simaojunior" style="color:inherit;">github</a>
+            · <a href="https://www.linkedin.com/in/simaojunior" style="color:inherit;">linkedin</a>
+          </dd>
+          <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);">{gettext("status")}</dt>
+          <dd style="padding:9px 12px;margin:0;color:var(--color-leaf-light);">
+            {gettext("active duty · open to interesting missions")}
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+    <div style="padding:40px 0 0;">
+      <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0 0 12px;color:var(--color-neutral-100);">
+        {gettext("Intel summary")}
+      </h2>
+      <p style="font-size:15px;line-height:1.7;color:var(--color-neutral-400);margin:0 0 16px;max-width:65ch;text-wrap:pretty;">
+        {gettext("Backend engineer with 5+ years developing critical, scalable systems in high-availability environments (~15 TPS, 40,000+ monthly transactions). End-to-end involvement, from planning to production, with a culture of ownership, technical leadership, and documentation (RFCs, ADRs). Solid experience designing distributed systems and microservices architectures.")}
+      </p>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;">
+        <li style="display:flex;gap:10px;align-items:baseline;">
+          <span style="flex:none;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.1em;color:var(--color-chakra);border:1px solid var(--color-chakra-dim);padding:1px 6px;border-radius:2px;">S</span>
+          <span style="font-size:14px;line-height:1.6;color:var(--color-neutral-300);">{gettext("Cut operational costs by 40% through automation and process optimization with N8N.")}</span>
+        </li>
+        <li style="display:flex;gap:10px;align-items:baseline;">
+          <span style="flex:none;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.1em;color:var(--color-chakra);border:1px solid var(--color-chakra-dim);padding:1px 6px;border-radius:2px;">A</span>
+          <span style="font-size:14px;line-height:1.6;color:var(--color-neutral-300);">{gettext("Saved 80 hours/month by automating commercial reports integrated with internal systems.")}</span>
+        </li>
+        <li style="display:flex;gap:10px;align-items:baseline;">
+          <span style="flex:none;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.1em;color:var(--color-chakra);border:1px solid var(--color-chakra-dim);padding:1px 6px;border-radius:2px;">A</span>
+          <span style="font-size:14px;line-height:1.6;color:var(--color-neutral-300);">{gettext("Accelerated deployments by 80% (5 min → 1 min) with CI/CD via GitHub Actions, Docker, and Azure Container Registry.")}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div style="padding:40px 0 0;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--color-neutral-800);padding-bottom:10px;margin-bottom:6px;flex-wrap:wrap;">
+        <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0;color:var(--color-neutral-100);">
+          {gettext("Mission history")}
+        </h2>
+        <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);">{gettext("4 missions · 0 failed")}</span>
+      </div>
+
+      <div style="padding:18px 0;border-bottom:1px solid var(--color-neutral-800);">
+        <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);margin-bottom:4px;">2026</div>
+        <div style="font-size:17px;color:var(--color-neutral-100);margin-bottom:2px;">
+          {gettext("Senior Backend Engineer")} · <span style="color:var(--color-neutral-500);">Caveo · {gettext("hybrid")}</span>
+        </div>
+        <ul style="margin:8px 0 0;padding-left:18px;font-size:14px;line-height:1.7;color:var(--color-neutral-400);">
+          <li>{gettext("Technically led the refactoring of a legacy system into a microservices architecture, optimizing the onboarding flow on the road to 20,000 users.")}</li>
+          <li>{gettext("Designed and implemented an event-driven architecture (fan-out) with AWS SNS/SQS between a Next.js BFF and the backend.")}</li>
+        </ul>
+      </div>
+
+      <div style="padding:18px 0;border-bottom:1px solid var(--color-neutral-800);">
+        <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);margin-bottom:4px;">2025–26</div>
+        <div style="font-size:17px;color:var(--color-neutral-100);margin-bottom:2px;">
+          {gettext("Backend Engineer (Mid III)")} · <span style="color:var(--color-neutral-500);">Caveo · {gettext("hybrid")}</span>
+        </div>
+        <ul style="margin:8px 0 0;padding-left:18px;font-size:14px;line-height:1.7;color:var(--color-neutral-400);">
+          <li>{gettext("Built backend services with Node.js, TypeScript, Koa.js, and PostgreSQL (TypeORM) on AWS (SNS, SQS, Cognito, S3).")}</li>
+          <li>{gettext("Led integrations with business-critical providers: KYC via QItech, and operational/sales automation via Pipefy and Pipedrive with N8N.")}</li>
+        </ul>
+      </div>
+
+      <div style="padding:18px 0;border-bottom:1px solid var(--color-neutral-800);">
+        <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);margin-bottom:4px;">2023–25</div>
+        <div style="font-size:17px;color:var(--color-neutral-100);margin-bottom:2px;">
+          {gettext("Backend Engineer")} · <span style="color:var(--color-neutral-500);">Nextcode · {gettext("remote")}</span>
+        </div>
+        <ul style="margin:8px 0 0;padding-left:18px;font-size:14px;line-height:1.7;color:var(--color-neutral-400);">
+          <li>{gettext("Architected an onboarding system with facial biometrics, OCR, taxpayer ID validation, and proof of life, processing 40,000+ monthly transactions (~15 TPS).")}</li>
+          <li>{gettext("Integrated Serpro and Receita Federal APIs, raising approval rates and cutting fraud; built a biometric risk-scoring system that reduced chargebacks.")}</li>
+          <li>{gettext("Automated commercial reports and alerts with N8N, saving 80 hours/month with 100% SLA compliance.")}</li>
+          <li>{gettext("Built a WhatsApp notification service on NATS.io; shipped a Flutter app for private events with KYC.")}</li>
+          <li>{gettext("Mentored interns, introduced an RFC process, and created CI/CD pipelines that cut deploys from 5 minutes to 1.")}</li>
+        </ul>
+      </div>
+
+      <div style="padding:18px 0;">
+        <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);margin-bottom:4px;">2021–23</div>
+        <div style="font-size:17px;color:var(--color-neutral-100);margin-bottom:2px;">
+          {gettext("Backend Engineer (Junior)")} · <span style="color:var(--color-neutral-500);">Nextcode · {gettext("remote")}</span>
+        </div>
+        <ul style="margin:8px 0 0;padding-left:18px;font-size:14px;line-height:1.7;color:var(--color-neutral-400);">
+          <li>{gettext("Documented company APIs and evolved legacy solutions with clean code practices and automated tests.")}</li>
+          <li>{gettext("Built RESTful APIs with Node.js/Fastify, TypeScript, and MongoDB.")}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="padding:40px 0 0;">
+      <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0 0 16px;color:var(--color-neutral-100);">
+        {gettext("Jutsu registry")}
+      </h2>
+      <dl style="margin:0;font-size:14px;">
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);align-items:start;">
+          <dt style="margin:0;font-weight:normal;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;padding-top:3px;">{gettext("backend")}</dt>
+          <dd style="margin:0;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag tag-accent">Elixir</span><span class="tag tag-neutral">Node.js</span><span class="tag tag-neutral">TypeScript</span><span class="tag tag-neutral">JavaScript</span><span class="tag tag-neutral">SQL</span><span class="tag tag-neutral">REST</span><span class="tag tag-neutral">Git</span>
+          </dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);align-items:start;">
+          <dt style="margin:0;font-weight:normal;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;padding-top:3px;">{gettext("databases")}</dt>
+          <dd style="margin:0;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag tag-neutral">PostgreSQL</span><span class="tag tag-neutral">MongoDB</span><span class="tag tag-neutral">Redis</span><span class="tag tag-neutral">MySQL</span>
+          </dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);align-items:start;">
+          <dt style="margin:0;font-weight:normal;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;padding-top:3px;">{gettext("messaging")}</dt>
+          <dd style="margin:0;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag tag-neutral">AWS SNS</span><span class="tag tag-neutral">AWS SQS</span><span class="tag tag-neutral">NATS.io</span><span class="tag tag-neutral">{gettext("webhooks")}</span>
+          </dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);align-items:start;">
+          <dt style="margin:0;font-weight:normal;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;padding-top:3px;">devops</dt>
+          <dd style="margin:0;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag tag-neutral">AWS</span><span class="tag tag-neutral">Docker</span><span class="tag tag-neutral">GitHub Actions</span><span class="tag tag-neutral">CI/CD</span><span class="tag tag-neutral">N8N</span>
+          </dd>
+        </div>
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;align-items:start;">
+          <dt style="margin:0;font-weight:normal;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;padding-top:3px;">{gettext("training")}</dt>
+          <dd style="margin:0;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag tag-outline">{gettext("system design")}</span><span class="tag tag-outline">Go</span><span class="tag tag-outline">{gettext("leadership")}</span><span class="tag tag-outline">{gettext("microservices")}</span>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:40px;padding:40px 0 0;align-items:start;">
+      <div>
+        <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0 0 14px;color:var(--color-neutral-100);">
+          {gettext("Academy record")}
+        </h2>
+        <dl style="margin:0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
+          <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;">
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">2018–21</dt>
+            <dd style="margin:0;color:var(--color-neutral-200);">{gettext("B.Sc. Information Systems")} ·
+            <span style="color:var(--color-neutral-500);">{gettext("Universidade Anhembi Morumbi, São Paulo")}</span></dd>
+          </div>
+        </dl>
+      </div>
+      <div>
+        <h2 style="font-family:var(--font-heading);font-weight:500;font-size:24px;letter-spacing:-0.02em;margin:0 0 14px;color:var(--color-neutral-100);">
+          {gettext("Languages")}
+        </h2>
+        <dl style="margin:0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;">
+          <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--color-neutral-800);">
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("portuguese")}</dt>
+            <dd style="margin:0;color:var(--color-neutral-200);">{gettext("native")}</dd>
+          </div>
+          <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:10px 0;">
+            <dt style="margin:0;font-weight:normal;color:var(--color-neutral-600);white-space:nowrap;">{gettext("english")}</dt>
+            <dd style="margin:0;color:var(--color-neutral-200);">{gettext("advanced")}</dd>
+          </div>
+        </dl>
+        <div style="margin-top:22px;padding:14px;border:1px dashed var(--color-neutral-700);border-radius:var(--radius-sm);">
+          <div style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:8px;">
+            {gettext("handler's note")}
+          </div>
+          <div style="font-size:14px;line-height:1.7;color:var(--color-neutral-400);">
+            {gettext("Self-taught, startup-hardened, and still training. Approach with interesting problems; he will not go rogue, but he will ask for an RFC.")}
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <Layouts.site_footer />
+  </div>
+</div>

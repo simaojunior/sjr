@@ -10,6 +10,9 @@ defmodule SjrWeb.PageHTML do
 
   def last_updated_label, do: Calendar.strftime(Date.utc_today(), "%-d %b %Y")
 
+  def cv_path("pt-br"), do: ~p"/files/simao-junior-cv-pt-br.pdf"
+  def cv_path(_locale), do: ~p"/files/simao-junior-cv-en.pdf"
+
   def ticker_text do
     nbsp = " "
 
