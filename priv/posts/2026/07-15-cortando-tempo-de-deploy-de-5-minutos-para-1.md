@@ -11,6 +11,8 @@
   description: "Construindo um pipeline de CI/CD com GitHub Actions, Docker e Azure Container Registry que transformou deploys de uma pausa para o café em um não-evento."
 }
 ---
+![Cortando o tempo de deploy de 5 minutos para 1](/images/posts/cutting-deploy-time-from-5-minutes-to-1.jpg)
+
 Todo deploy significava cerca de cinco minutos olhando para um terminal, e a
 maior parte desse tempo ia para passos manuais que precisavam acontecer antes
 mesmo do build começar. Ninguém agendava um deploy para uma tarde tranquila de

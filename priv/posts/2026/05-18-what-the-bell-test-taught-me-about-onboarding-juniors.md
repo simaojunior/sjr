@@ -8,6 +8,8 @@
   description: "The test was never about the bells. Neither is your first-week ticket."
 }
 ---
+![What the bell test taught me about onboarding juniors](/images/posts/what-the-bell-test-taught-me-about-onboarding-juniors.jpg)
+
 > Placeholder post carried over from the homepage design mock. Replace with a
 > real write-up when ready.
 

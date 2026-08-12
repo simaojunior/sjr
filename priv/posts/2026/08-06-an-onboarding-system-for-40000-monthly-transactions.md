@@ -8,6 +8,8 @@
   description: "Facial biometrics, OCR, and CPF validation, processing roughly 15 transactions per second in production."
 }
 ---
+![An onboarding system for 40,000 monthly transactions](/images/posts/an-onboarding-system-for-40000-monthly-transactions.jpg)
+
 Onboarding was the first thing every new user hit at Nextcode, and it
 depended on manual document review. That held up fine at a few thousand
 signups a month. It did not hold up as volume grew toward tens of

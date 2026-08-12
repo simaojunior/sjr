@@ -9,6 +9,8 @@
   description: "Every retry bug I've debugged came down to storing the wrong thing. What to persist, and when."
 }
 ---
+![Idempotency keys are a data model, not a header](/images/posts/idempotency-keys-are-a-data-model-not-a-header.jpg)
+
 > Placeholder post carried over from the homepage design mock. Replace with a
 > real write-up when ready; the title, rank, and teaser above are already
 > wired into the mission log on the homepage.

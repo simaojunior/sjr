@@ -6,6 +6,8 @@
   description: "Zola looks for either config.toml or zola.toml at the project root."
 }
 ---
+![Zola reads both config.toml and zola.toml](/images/posts/zola-config-name.jpg)
+
 Zola looks for its configuration at the project root under **either**
 `config.toml` **or** `zola.toml`, no `-c` flag needed. Pass `-c <path>` only
 when the file lives elsewhere or has a different name.

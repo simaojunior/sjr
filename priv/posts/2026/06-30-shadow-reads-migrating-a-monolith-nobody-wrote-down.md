@@ -8,6 +8,8 @@
   description: "How we moved 40 endpoints off a PHP service without one planned downtime window."
 }
 ---
+![Shadow reads: migrating a monolith nobody wrote down](/images/posts/shadow-reads-migrating-a-monolith-nobody-wrote-down.jpg)
+
 > Placeholder post carried over from the homepage design mock. Replace with a
 > real write-up when ready.
 

@@ -8,6 +8,8 @@
   description: "Automating commercial reports and alerts with N8N saved 80 hours a month and kept SLA compliance at 100%."
 }
 ---
+![Cutting operational costs 40% with automation](/images/posts/cutting-operational-costs-40-percent-with-automation.jpg)
+
 Commercial reports and alerts were assembled by hand every week. It ate a
 full day of someone's time, and it still missed things when a system went
 quiet without anyone noticing until a customer complained.
