@@ -231,22 +231,24 @@ a.card:hover { box-shadow: var(--shadow-md); text-decoration: none; }
 }
 
 [data-theme="light"] {
-  --color-bg: #f4f2ea; --color-surface: #faf8f2; --color-text: #1a1c19;
+  /* base palette from the user's Catppuccin Latte nvim variant; muted/accent
+     tones nudged darker where needed to keep 4.5:1 text contrast on --color-bg */
+  --color-bg: #f9f5d7; --color-surface: #f0ebce; --color-text: #654735;
   --color-accent: #b64f33; --color-accent-2: #b3813e;
-  --color-divider: color-mix(in srgb, #1a1c19 16%, transparent);
-  --color-neutral-100: #1a1c19; --color-neutral-200: #2a2c27; --color-neutral-300: #3f423b;
-  --color-neutral-400: #5f6157; --color-neutral-500: #6d6f65; --color-neutral-600: #6d6f67;
-  --color-neutral-700: #cbccc2; --color-neutral-800: #e0e0d6; --color-neutral-900: #eceade;
+  --color-divider: color-mix(in srgb, #654735 16%, transparent);
+  --color-neutral-100: #654735; --color-neutral-200: #73503c; --color-neutral-300: #805942;
+  --color-neutral-400: #8c6249; --color-neutral-500: #75614d; --color-neutral-600: #78604b;
+  --color-neutral-700: #d1c7a3; --color-neutral-800: #e3dec3; --color-neutral-900: #e8e3c8;
   --color-accent-100: #5a2417; --color-accent-200: #7f3623; --color-accent-300: #a04530;
   --color-accent-400: #b64f33; --color-accent-500: #c85a3c; --color-accent-600: #d47a5e;
   --color-accent-700: #ecc0b2; --color-accent-800: #f7ded4; --color-accent-900: #fbeee7;
   --color-accent-2-100: #4c371d; --color-accent-2-200: #715029; --color-accent-2-300: #8f6631;
   --color-accent-2-400: #b3813e; --color-accent-2-500: #d9a05b; --color-accent-2-600: #e6bd85;
   --color-accent-2-700: #f0d6ae; --color-accent-2-800: #f9ecd8; --color-accent-2-900: #fdf6ec;
-  --color-chakra: #9d571b; --color-chakra-dim: #9a5115; --color-leaf-light: #3f6b4d;
-  --shadow-sm: 0 0 0 1px #e0e0d6;
-  --shadow-md: 0 0 0 1px #cbccc2, 0 6px 18px rgba(26,28,25,0.16);
-  --shadow-lg: 0 0 0 1px #8a8c82, 0 16px 40px rgba(26,28,25,0.22);
+  --color-chakra: #98531e; --color-chakra-dim: #7d4517; --color-leaf-light: #6a6730;
+  --shadow-sm: 0 0 0 1px #e3dec3;
+  --shadow-md: 0 0 0 1px #d1c7a3, 0 6px 18px rgba(101,71,53,0.16);
+  --shadow-lg: 0 0 0 1px #bfb695, 0 16px 40px rgba(101,71,53,0.22);
 }
 
 .post-body h1, .post-body h2, .post-body h3 { color: var(--color-neutral-100); margin-top: 1.4em; }
