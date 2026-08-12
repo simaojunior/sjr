@@ -131,10 +131,9 @@
           </li>
 
           <li :for={post <- @draft_posts}>
-            <a
-              href={~p"/posts/#{post.id}"}
-              class="mission-row"
-              style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;opacity:0.55;"
+            <div
+              aria-disabled="true"
+              style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;opacity:0.55;cursor:default;"
             >
               <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">{gettext(
                 "TBD"
@@ -148,7 +147,7 @@
               <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);white-space:nowrap;">{gettext(
                 "queued"
               )}</span>
-            </a>
+            </div>
           </li>
         </ul>
       </div>
