@@ -197,6 +197,24 @@ defmodule SjrWeb.Layouts do
     """
   end
 
+  @doc """
+  Entries for the ⌘P command menu, ported from the old Zola site.
+  Labels are resolved through Gettext for the current request's locale.
+  """
+  def command_menu_items do
+    [
+      %{label: gettext("Home"), url: "/", external: false},
+      %{label: gettext("Scrolls"), url: "/#writing", external: false},
+      %{label: gettext("TIL"), url: "/til", external: false},
+      %{label: gettext("Bingo book"), url: "/#projects", external: false},
+      %{label: gettext("About"), url: "/#about", external: false},
+      %{label: gettext("Uses"), url: "/uses", external: false},
+      %{label: gettext("CV"), url: "/cv", external: false},
+      %{label: "GitHub", url: "https://github.com/simaojunior", external: true},
+      %{label: gettext("Email"), url: "mailto:simao.msjr@gmail.com", external: false}
+    ]
+  end
+
   defp current_year, do: Date.utc_today().year
 
   defp visitor_number do

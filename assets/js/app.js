@@ -73,4 +73,119 @@
 
     wrapper.appendChild(btn);
   });
+
+  const dataEl = document.getElementById("command-menu-data");
+  const overlay = document.getElementById("command-menu-overlay");
+  const trigger = document.getElementById("command-menu-trigger");
+  if (dataEl && overlay && trigger) {
+    const items = JSON.parse(dataEl.dataset.items);
+    const input = document.getElementById("command-menu-input");
+    const list = document.getElementById("command-menu-list");
+    let selected = 0;
+    let filtered = items.slice();
+
+    const esc = (s) =>
+      s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+    const render = () => {
+      list.innerHTML = "";
+      if (filtered.length === 0) {
+        const empty = document.createElement("li");
+        empty.className = "cmd-empty";
+        empty.textContent = isPtBr ? "Nenhum resultado" : "No results";
+        list.appendChild(empty);
+        return;
+      }
+      filtered.forEach((it, i) => {
+        const li = document.createElement("li");
+        li.className = "cmd-item" + (i === selected ? " is-selected" : "");
+        li.setAttribute("role", "option");
+        li.innerHTML =
+          `<span class="cmd-label">${esc(it.label)}</span>` +
+          (it.external ? '<span class="cmd-ext">&#8599;</span>' : "");
+        li.addEventListener("click", () => activate(i));
+        li.addEventListener("mousemove", () => {
+          if (selected !== i) {
+            selected = i;
+            updateSelected();
+          }
+        });
+        list.appendChild(li);
+      });
+    };
+
+    const updateSelected = () => {
+      const children = list.children;
+      for (let i = 0; i < children.length; i++) {
+        children[i].classList.toggle("is-selected", i === selected);
+      }
+      const el = children[selected];
+      if (el && el.scrollIntoView) el.scrollIntoView({ block: "nearest" });
+    };
+
+    const filter = () => {
+      const q = input.value.trim().toLowerCase();
+      filtered = items.filter((it) => it.label.toLowerCase().indexOf(q) !== -1);
+      selected = 0;
+      render();
+    };
+
+    const open = () => {
+      overlay.hidden = false;
+      document.body.style.overflow = "hidden";
+      input.value = "";
+      filter();
+      input.focus();
+    };
+
+    const close = () => {
+      overlay.hidden = true;
+      document.body.style.overflow = "";
+    };
+
+    const activate = (i) => {
+      const it = filtered[i];
+      if (!it) return;
+      close();
+      if (it.external) window.open(it.url, "_blank", "noopener");
+      else window.location.href = it.url;
+    };
+
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && (e.key === "p" || e.key === "P")) {
+        e.preventDefault();
+        if (overlay.hidden) open();
+        else close();
+      } else if (e.key === "Escape" && !overlay.hidden) {
+        close();
+      }
+    });
+
+    input.addEventListener("keydown", (e) => {
+      const down = (e.ctrlKey && (e.key === "j" || e.key === "J")) || e.key === "ArrowDown";
+      const up = (e.ctrlKey && (e.key === "k" || e.key === "K")) || e.key === "ArrowUp";
+      if (down) {
+        e.preventDefault();
+        if (filtered.length) {
+          selected = (selected + 1) % filtered.length;
+          updateSelected();
+        }
+      } else if (up) {
+        e.preventDefault();
+        if (filtered.length) {
+          selected = (selected - 1 + filtered.length) % filtered.length;
+          updateSelected();
+        }
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        activate(selected);
+      }
+    });
+
+    input.addEventListener("input", filter);
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) close();
+    });
+    trigger.addEventListener("click", open);
+  }
 })();

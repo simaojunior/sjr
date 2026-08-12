@@ -97,6 +97,7 @@ msgstr "Engenheiro Backend (Júnior)"
 msgid "Backend Engineer (Mid III)"
 msgstr "Engenheiro Backend (Pleno III)"
 
+#: lib/sjr_web/components/layouts.ex:209
 #: lib/sjr_web/controllers/page_html/home.html.heex:39
 #: lib/sjr_web/controllers/page_html/home.html.heex:143
 #, elixir-autogen, elixir-format
@@ -240,6 +241,7 @@ msgstr "Três regras"
 msgid "Today I learned: small, quick notes that didn't earn a full scroll."
 msgstr "Hoje eu aprendi: anotações pequenas e rápidas que não renderam um pergaminho inteiro."
 
+#: lib/sjr_web/components/layouts.ex:211
 #: lib/sjr_web/controllers/page_controller.ex:21
 #, elixir-autogen, elixir-format
 msgid "Uses"
@@ -552,6 +554,7 @@ msgstr "Desenvolveu um serviço de notificações via WhatsApp com NATS.io; lan�
 msgid "Built backend services with Node.js, TypeScript, Koa.js, and PostgreSQL (TypeORM) on AWS (SNS, SQS, Cognito, S3)."
 msgstr "Desenvolveu serviços de backend com Node.js, TypeScript, Koa.js e PostgreSQL (TypeORM) na AWS (SNS, SQS, Cognito, S3)."
 
+#: lib/sjr_web/components/layouts.ex:212
 #: lib/sjr_web/controllers/page_controller.ex:25
 #, elixir-autogen, elixir-format
 msgid "CV"
@@ -748,3 +751,68 @@ msgstr "estudos"
 #, elixir-autogen, elixir-format
 msgid "webhooks"
 msgstr "webhooks"
+
+#: lib/sjr_web/components/layouts.ex:210
+#, elixir-autogen, elixir-format
+msgid "About"
+msgstr "Sobre"
+
+#: lib/sjr_web/components/layouts/root.html.heex:44
+#, elixir-autogen, elixir-format
+msgid "Command menu"
+msgstr "Menu de comandos"
+
+#: lib/sjr_web/components/layouts/root.html.heex:56
+#, elixir-autogen, elixir-format
+msgid "ESC to close"
+msgstr "ESC para fechar"
+
+#: lib/sjr_web/components/layouts.ex:214
+#, elixir-autogen, elixir-format
+msgid "Email"
+msgstr "Email"
+
+#: lib/sjr_web/components/layouts.ex:206
+#, elixir-autogen, elixir-format
+msgid "Home"
+msgstr "Início"
+
+#: lib/sjr_web/components/layouts/root.html.heex:39
+#, elixir-autogen, elixir-format
+msgid "Open command menu"
+msgstr "Abrir menu de comandos"
+
+#: lib/sjr_web/components/layouts/root.html.heex:41
+#, elixir-autogen, elixir-format
+msgid "Press"
+msgstr "Pressione"
+
+#: lib/sjr_web/components/layouts.ex:207
+#, elixir-autogen, elixir-format
+msgid "Scrolls"
+msgstr "[pergaminhos]"
+
+#: lib/sjr_web/components/layouts/root.html.heex:52
+#, elixir-autogen, elixir-format
+msgid "Search"
+msgstr "Buscar"
+
+#: lib/sjr_web/components/layouts.ex:208
+#, elixir-autogen, elixir-format
+msgid "TIL"
+msgstr "TIL"
+
+#: lib/sjr_web/components/layouts/root.html.heex:49
+#, elixir-autogen, elixir-format
+msgid "Type to search..."
+msgstr "Digite para buscar..."
+
+#: lib/sjr_web/components/layouts/root.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "navigate"
+msgstr "navegar"
+
+#: lib/sjr_web/components/layouts/root.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "open"
+msgstr "abrir"

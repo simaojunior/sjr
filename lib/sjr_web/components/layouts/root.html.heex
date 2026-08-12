@@ -28,5 +28,33 @@
   <body>
     <a href="#main-content" class="skip-link">{gettext("Skip to content")}</a>
     {@inner_content}
+
+    <div id="command-menu-data" data-items={Jason.encode!(SjrWeb.Layouts.command_menu_items())} hidden></div>
+    <button
+      id="command-menu-trigger"
+      type="button"
+      class="command-menu-trigger"
+      aria-label={gettext("Open command menu")}
+    >
+      <span>{gettext("Press")}</span><kbd>⌘ P</kbd>
+    </button>
+    <div id="command-menu-overlay" class="cmd-overlay" hidden>
+      <div class="cmd-panel" role="dialog" aria-modal="true" aria-label={gettext("Command menu")}>
+        <input
+          id="command-menu-input"
+          class="cmd-input"
+          type="text"
+          placeholder={gettext("Type to search...")}
+          autocomplete="off"
+          spellcheck="false"
+          aria-label={gettext("Search")}
+        />
+        <ul id="command-menu-list" class="cmd-list" role="listbox"></ul>
+        <div class="cmd-footer">
+          <span>{gettext("ESC to close")}</span>
+          <span><kbd>^J</kbd><kbd>^K</kbd> {gettext("navigate")} · <kbd>&crarr;</kbd> {gettext("open")}</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
