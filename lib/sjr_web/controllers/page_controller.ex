@@ -24,4 +24,12 @@ defmodule SjrWeb.PageController do
   def cv(conn, _params) do
     render(conn, :cv, page_title: gettext("CV"))
   end
+
+  def tag(conn, %{"tag" => tag}) do
+    render(conn, :tag,
+      tag: tag,
+      posts: Blog.posts_by_tag(tag, conn.assigns.locale),
+      page_title: tag
+    )
+  end
 end

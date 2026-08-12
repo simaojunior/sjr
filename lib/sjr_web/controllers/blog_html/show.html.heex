@@ -56,7 +56,7 @@
           {@post.title}
         </h1>
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <span :for={tag <- @post.tags} class="tag tag-neutral">{tag}</span>
+          <a :for={tag <- @post.tags} href={~p"/tags/#{tag}"} class="tag tag-neutral">{tag}</a>
         </div>
         <% translation = Sjr.Blog.find_translation(@post) %>
         <a

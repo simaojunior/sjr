@@ -155,11 +155,13 @@ figcaption {
   display: inline-flex; align-items: center; font-size: 11px;
   letter-spacing: 0.02em; padding: 3px 10px;
   border-radius: calc(var(--radius-md) * 0.75);
+  text-decoration: none;
 }
 .tag-accent { background: var(--color-accent-800); color: var(--color-accent-100); }
 .tag-accent-2 { background: var(--color-accent-2-800); color: var(--color-accent-2-100); }
 .tag-neutral { background: var(--color-neutral-800); color: var(--color-neutral-100); }
 .tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+a.tag:hover { background: var(--color-accent-700); color: var(--color-accent-100); }
 
 .nav {
   display: flex; align-items: center; gap: var(--space-4);

@@ -23,6 +23,7 @@ defmodule SjrWeb.Router do
     get "/til", PageController, :til
     get "/uses", PageController, :uses
     get "/cv", PageController, :cv
+    get "/tags/:tag", PageController, :tag
     get "/posts/:id", BlogController, :show
   end
 
