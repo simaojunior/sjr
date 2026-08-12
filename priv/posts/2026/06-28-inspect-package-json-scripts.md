@@ -6,7 +6,7 @@
   description: "A quick way to check package.json scripts using a shell function."
 }
 ---
-![Quickly Inspect package.json Scripts](/images/til/inspect-package-json-scripts.jpg)
+![Quickly Inspect package.json Scripts](/images/posts/inspect-package-json-scripts.jpg)
 
 Not exactly new knowledge, but today I felt like adding another small utility to
 my shell toolkit: a quick way to list every script defined in a `package.json`
