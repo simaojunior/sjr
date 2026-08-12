@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="priv/static/images/logo.svg" alt="Simão Júnior" width="80">
+  <img src="priv/static/images/icon-512.png" alt="Simão Júnior" width="80">
 </p>
 
 <h1 align="center">simaojunior.dev</h1>
@@ -9,6 +9,17 @@
   <a href="https://www.phoenixframework.org/">Phoenix</a> and
   <a href="https://github.com/dashbitco/nimble_publisher">NimblePublisher</a>.
   No database — posts are markdown files compiled at build time.
+</p>
+
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/home-dark.jpg" alt="Homepage, dark theme" width="49%">
+  <img src="docs/screenshots/home-light.jpg" alt="Homepage, light theme" width="49%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/post.jpg" alt="A blog post, with syntax-highlighted code and a hand-drawn hero image" width="49%">
+  <img src="docs/screenshots/cv.jpg" alt="The /cv page, a themed 'ninja report' resume" width="49%">
 </p>
 
 ## Development
