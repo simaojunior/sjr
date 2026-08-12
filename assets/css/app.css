@@ -231,13 +231,16 @@ a.card:hover { box-shadow: var(--shadow-md); text-decoration: none; }
 }
 
 [data-theme="light"] {
-  /* base palette from the user's Catppuccin Latte nvim variant; muted/accent
-     tones nudged darker where needed to keep 4.5:1 text contrast on --color-bg */
-  --color-bg: #f9f5d7; --color-surface: #f0ebce; --color-text: #654735;
+  /* background/borders from the user's Catppuccin Latte nvim variant; the text
+     scale stays a desaturated warm charcoal (not brown) to mirror the dark
+     theme's cream-on-charcoal pairing — the "Naruto" color lives in the accent
+     and chakra oranges, not the base text. Muted tones nudged darker where
+     needed to keep 4.5:1 text contrast on --color-bg and --color-neutral-900. */
+  --color-bg: #f9f5d7; --color-surface: #f0ebce; --color-text: #1a1c19;
   --color-accent: #b64f33; --color-accent-2: #b3813e;
-  --color-divider: color-mix(in srgb, #654735 16%, transparent);
-  --color-neutral-100: #654735; --color-neutral-200: #73503c; --color-neutral-300: #805942;
-  --color-neutral-400: #8c6249; --color-neutral-500: #75614d; --color-neutral-600: #78604b;
+  --color-divider: color-mix(in srgb, #1a1c19 16%, transparent);
+  --color-neutral-100: #1a1c19; --color-neutral-200: #2a2c27; --color-neutral-300: #3f423b;
+  --color-neutral-400: #5f6157; --color-neutral-500: #64665d; --color-neutral-600: #64665f;
   --color-neutral-700: #d1c7a3; --color-neutral-800: #e3dec3; --color-neutral-900: #e8e3c8;
   --color-accent-100: #5a2417; --color-accent-200: #7f3623; --color-accent-300: #a04530;
   --color-accent-400: #b64f33; --color-accent-500: #c85a3c; --color-accent-600: #d47a5e;
@@ -247,8 +250,8 @@ a.card:hover { box-shadow: var(--shadow-md); text-decoration: none; }
   --color-accent-2-700: #f0d6ae; --color-accent-2-800: #f9ecd8; --color-accent-2-900: #fdf6ec;
   --color-chakra: #98531e; --color-chakra-dim: #7d4517; --color-leaf-light: #6a6730;
   --shadow-sm: 0 0 0 1px #e3dec3;
-  --shadow-md: 0 0 0 1px #d1c7a3, 0 6px 18px rgba(101,71,53,0.16);
-  --shadow-lg: 0 0 0 1px #bfb695, 0 16px 40px rgba(101,71,53,0.22);
+  --shadow-md: 0 0 0 1px #d1c7a3, 0 6px 18px rgba(26,28,25,0.16);
+  --shadow-lg: 0 0 0 1px #bfb695, 0 16px 40px rgba(26,28,25,0.22);
 }
 
 .post-body h1, .post-body h2, .post-body h3 { color: var(--color-neutral-100); margin-top: 1.4em; }
