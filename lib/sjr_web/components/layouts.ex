@@ -172,7 +172,11 @@ defmodule SjrWeb.Layouts do
           style="display:flex;gap:10px;flex-wrap:wrap;list-style:none;margin:0;padding:0;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;"
         >
           <li><a href="https://github.com/simaojunior" class="footer-link">github</a></li>
-          <li><span class="footer-link-disabled">bluesky</span></li>
+          <li>
+            <a href="https://bsky.app/profile/simaojunior.programmer.blue" class="footer-link">
+              bluesky
+            </a>
+          </li>
           <li><span class="footer-link-disabled">linkedin</span></li>
           <li><span class="footer-link-disabled">rss</span></li>
           <li><a href="mailto:simao.msjr@gmail.com" class="footer-link">email</a></li>
@@ -213,6 +217,11 @@ defmodule SjrWeb.Layouts do
       %{label: gettext("Uses"), url: "/uses", external: false},
       %{label: gettext("CV"), url: "/cv", external: false},
       %{label: "GitHub", url: "https://github.com/simaojunior", external: true},
+      %{
+        label: "Bluesky",
+        url: "https://bsky.app/profile/simaojunior.programmer.blue",
+        external: true
+      },
       %{label: gettext("Email"), url: "mailto:simao.msjr@gmail.com", external: false}
     ]
   end
