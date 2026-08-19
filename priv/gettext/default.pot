@@ -112,7 +112,7 @@ msgstr ""
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:265
 #, elixir-autogen, elixir-format
-msgid "Borrowed from a certain orange idiot. It still holds up for estimates."
+msgid "Consistency beats talent. Nothing here fell from the sky, it was earned commit by commit."
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:77
@@ -157,7 +157,7 @@ msgstr ""
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:262
 #, elixir-autogen, elixir-format
-msgid "Never go back on your word"
+msgid "Discipline Driven Development"
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/uses.html.heex:44
@@ -167,7 +167,7 @@ msgstr ""
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:71
 #, elixir-autogen, elixir-format
-msgid "Onboarding & KYC systems, event-driven architecture"
+msgid "Onboarding & KYC systems, LLM document classification, event-driven architecture"
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:43
@@ -204,7 +204,7 @@ msgstr ""
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:229
 #, elixir-autogen, elixir-format
-msgid "Ship the version you can explain at 3am. Then teach it to someone else, or you never really learned it."
+msgid "It's not about being the best. It's about training every day until the impossible becomes a habit."
 msgstr ""
 
 #: lib/sjr_web/components/layouts.ex:77
@@ -827,4 +827,9 @@ msgstr ""
 #: lib/sjr_web/controllers/page_html/tag.html.heex:8
 #, elixir-autogen, elixir-format
 msgid "tagged"
+msgstr ""
+
+#: lib/sjr_web/controllers/page_html/home.html.heex:239
+#, elixir-autogen, elixir-format
+msgid "shugyō · the austere training"
 msgstr ""

@@ -112,8 +112,8 @@ msgstr "Chato de propósito"
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:265
 #, elixir-autogen, elixir-format
-msgid "Borrowed from a certain orange idiot. It still holds up for estimates."
-msgstr "Emprestado de um certo idiota laranja. Ainda funciona pra estimativas."
+msgid "Consistency beats talent. Nothing here fell from the sky, it was earned commit by commit."
+msgstr "Consistência vence talento. Nada aqui caiu do céu, foi conquistado commit por commit."
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:77
 #, elixir-autogen, elixir-format
@@ -157,8 +157,8 @@ msgstr "SEM ETAPA DE BUILD"
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:262
 #, elixir-autogen, elixir-format
-msgid "Never go back on your word"
-msgstr "Nunca volte atrás na sua palavra"
+msgid "Discipline Driven Development"
+msgstr "Discipline Driven Development"
 
 #: lib/sjr_web/controllers/page_html/uses.html.heex:44
 #, elixir-autogen, elixir-format
@@ -167,8 +167,8 @@ msgstr "NixOS (a propósito, eu uso NixOS)"
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:71
 #, elixir-autogen, elixir-format
-msgid "Onboarding & KYC systems, event-driven architecture"
-msgstr "Sistemas de onboarding e KYC, arquitetura orientada a eventos"
+msgid "Onboarding & KYC systems, LLM document classification, event-driven architecture"
+msgstr "Sistemas de onboarding e KYC, classificação de documentos com LLM, arquitetura orientada a eventos"
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:43
 #, elixir-autogen, elixir-format
@@ -204,8 +204,8 @@ msgstr "Engenheiro backend sênior com mais de 5 anos construindo sistemas crít
 
 #: lib/sjr_web/controllers/page_html/home.html.heex:229
 #, elixir-autogen, elixir-format
-msgid "Ship the version you can explain at 3am. Then teach it to someone else, or you never really learned it."
-msgstr "Publique a versão que você consegue explicar às 3 da manhã. Depois ensine a outra pessoa, ou você nunca aprendeu de verdade."
+msgid "It's not about being the best. It's about training every day until the impossible becomes a habit."
+msgstr "Não é sobre ser o melhor. É sobre treinar todos os dias até que o impossível vire hábito."
 
 #: lib/sjr_web/components/layouts.ex:77
 #, elixir-autogen, elixir-format
@@ -828,3 +828,8 @@ msgstr "nada marcado com essa tag ainda"
 #, elixir-autogen, elixir-format
 msgid "tagged"
 msgstr "marcado com"
+
+#: lib/sjr_web/controllers/page_html/home.html.heex:239
+#, elixir-autogen, elixir-format
+msgid "shugyō · the austere training"
+msgstr "shugyō · o treinamento austero"

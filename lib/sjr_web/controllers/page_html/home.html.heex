@@ -68,7 +68,9 @@
               {gettext("affinity")}
             </dt>
             <dd style="padding:9px 12px;margin:0;color:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-800);">
-              {gettext("Onboarding & KYC systems, event-driven architecture")}
+              {gettext(
+                "Onboarding & KYC systems, LLM document classification, event-driven architecture"
+              )}
             </dd>
             <dt style="padding:9px 12px;margin:0;font-weight:normal;color:var(--color-neutral-600);border-bottom:1px solid var(--color-neutral-800);">
               {gettext("squad")}
@@ -88,11 +90,13 @@
               {gettext("jutsu registry")}
             </div>
             <div style="display:flex;gap:6px;flex-wrap:wrap;">
-              <span class="tag tag-accent">Elixir</span>
-              <span class="tag tag-neutral">TypeScript</span>
+              <span class="tag tag-accent">TypeScript</span>
               <span class="tag tag-neutral">Node.js</span>
+              <span class="tag tag-neutral">Elixir</span>
               <span class="tag tag-neutral">PostgreSQL</span>
+              <span class="tag tag-neutral">MongoDB</span>
               <span class="tag tag-neutral">AWS</span>
+              <span class="tag tag-neutral">Flutter</span>
               <span class="tag tag-outline">shadow clone (N8N)</span>
             </div>
           </div>
@@ -163,22 +167,6 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px;">
           <a
-            href="https://github.com/simaojunior/katu"
-            class="card"
-            style="display:flex;flex-direction:column;gap:8px;color:inherit;"
-          >
-            <div class="card-kicker">{gettext("open source · Rust")}</div>
-            <div class="card-title">Katu</div>
-            <div class="card-body">
-              {gettext(
-                "A minimalist terminal multiplexer with first-class AI context. Sessions survive disconnects, and each one exposes its own context file so your AI assistant knows what you're doing."
-              )}
-            </div>
-            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;">
-              <span class="tag tag-outline">Rust</span><span class="tag tag-outline">CLI</span>
-            </div>
-          </a>
-          <a
             href="https://lumoki.app"
             class="card"
             style="display:flex;flex-direction:column;gap:8px;color:inherit;"
@@ -192,6 +180,22 @@
             </div>
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;">
               <span class="tag tag-outline">TypeScript</span><span class="tag tag-outline">Expo</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/simaojunior/katu"
+            class="card"
+            style="display:flex;flex-direction:column;gap:8px;color:inherit;"
+          >
+            <div class="card-kicker">{gettext("open source · Rust")}</div>
+            <div class="card-title">Katu</div>
+            <div class="card-body">
+              {gettext(
+                "A minimalist terminal multiplexer with first-class AI context. Sessions survive disconnects, and each one exposes its own context file so your AI assistant knows what you're doing."
+              )}
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;">
+              <span class="tag tag-outline">Rust</span><span class="tag tag-outline">CLI</span>
             </div>
           </a>
           <div class="card" style="display:flex;flex-direction:column;gap:8px;">
@@ -227,9 +231,13 @@
         </div>
         <p style="font-family:var(--font-heading);font-weight:500;font-size:clamp(20px,3.4vw,28px);line-height:1.35;letter-spacing:-0.02em;color:#eef0e6;margin:0;max-width:44ch;text-wrap:pretty;">
           {gettext(
-            "Ship the version you can explain at 3am. Then teach it to someone else, or you never really learned it."
+            "It's not about being the best. It's about training every day until the impossible becomes a habit."
           )}
         </p>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:14px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-leaf-light);">
+          <span style="font-size:16px;letter-spacing:0.08em;">修行</span>
+          <span>{gettext("shugyō · the austere training")}</span>
+        </div>
       </div>
 
       <div
@@ -259,10 +267,12 @@
             </div>
             <div style="border-left:2px solid var(--color-accent-700);padding-left:14px;">
               <div style="font-size:15px;color:var(--color-neutral-100);margin-bottom:3px;">
-                {gettext("Never go back on your word")}
+                {gettext("Discipline Driven Development")}
               </div>
               <div style="font-size:14px;line-height:1.6;color:var(--color-neutral-500);">
-                {gettext("Borrowed from a certain orange idiot. It still holds up for estimates.")}
+                {gettext(
+                  "Consistency beats talent. Nothing here fell from the sky, it was earned commit by commit."
+                )}
               </div>
             </div>
           </div>
