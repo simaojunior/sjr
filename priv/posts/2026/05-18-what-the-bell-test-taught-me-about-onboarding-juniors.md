@@ -2,7 +2,7 @@
   draft: true,
   title: "What the bell test taught me about onboarding juniors",
   author: "Simão Júnior",
-  tags: ["placeholder"],
+  tags: [],
   rank: "C-rank",
   icon: "bell",
   description: "The test was never about the bells. Neither is your first-week ticket."

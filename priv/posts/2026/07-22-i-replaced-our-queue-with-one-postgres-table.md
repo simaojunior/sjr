@@ -2,7 +2,7 @@
   draft: true,
   title: "I replaced our queue with one Postgres table",
   author: "Simão Júnior",
-  tags: ["placeholder"],
+  tags: [],
   rank: "S-rank",
   icon: "queue",
   description: "SKIP LOCKED, a status column, and 300 lines. Six months in production: what broke and what didn't."

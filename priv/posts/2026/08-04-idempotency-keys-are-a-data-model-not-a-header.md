@@ -3,7 +3,7 @@
   featured: true,
   title: "Idempotency keys are a data model, not a header",
   author: "Simão Júnior",
-  tags: ["placeholder"],
+  tags: [],
   rank: "A-rank",
   icon: "key",
   description: "Every retry bug I've debugged came down to storing the wrong thing. What to persist, and when."

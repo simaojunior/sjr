@@ -2,7 +2,7 @@
   draft: true,
   title: "Shadow reads: migrating a monolith nobody wrote down",
   author: "Simão Júnior",
-  tags: ["placeholder"],
+  tags: [],
   rank: "S-rank",
   icon: "layers",
   description: "How we moved 40 endpoints off a PHP service without one planned downtime window."
