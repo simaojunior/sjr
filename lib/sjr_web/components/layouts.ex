@@ -177,7 +177,9 @@ defmodule SjrWeb.Layouts do
               bluesky
             </a>
           </li>
-          <li><span class="footer-link-disabled">linkedin</span></li>
+          <li>
+            <a href="https://www.linkedin.com/in/simaojunior" class="footer-link">linkedin</a>
+          </li>
           <li><span class="footer-link-disabled">rss</span></li>
           <li><a href="mailto:simao.msjr@gmail.com" class="footer-link">email</a></li>
         </ul>
