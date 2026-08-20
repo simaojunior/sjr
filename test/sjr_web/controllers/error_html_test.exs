@@ -5,7 +5,11 @@ defmodule SjrWeb.ErrorHTMLTest do
   import Phoenix.Template, only: [render_to_string: 4]
 
   test "renders 404.html" do
-    assert render_to_string(SjrWeb.ErrorHTML, "404", "html", []) == "Not Found"
+    html = render_to_string(SjrWeb.ErrorHTML, "404", "html", [])
+
+    assert html =~ "MISSION FAILED · 404"
+    assert html =~ "This scroll was never filed."
+    assert html =~ ~s(href="/")
   end
 
   test "renders 500.html" do
