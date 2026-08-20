@@ -115,7 +115,7 @@
         </div>
 
         <ul style="list-style:none;margin:0;padding:0;">
-          <li :for={post <- @posts}>
+          <li :for={post <- @posts} class="reveal">
             <a
               href={~p"/posts/#{post.id}"}
               class="mission-row"
@@ -123,7 +123,7 @@
             >
               <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--color-neutral-600);white-space:nowrap;">{post.date}</span>
               <span>
-                <span style="display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;">{post.title}</span>
+                <span style={"display:block;font-size:17px;color:var(--color-neutral-100);margin-bottom:4px;view-transition-name:post-#{post.id};"}>{post.title}</span>
                 <span style="display:block;font-size:15px;color:var(--color-neutral-400);line-height:1.6;max-width:65ch;">{post.description}</span>
               </span>
               <span style="font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-chakra);white-space:nowrap;">{gettext(
@@ -134,7 +134,7 @@
             </a>
           </li>
 
-          <li :for={post <- @draft_posts}>
+          <li :for={post <- @draft_posts} class="reveal">
             <div
               aria-disabled="true"
               style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 18px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--color-neutral-800);color:inherit;opacity:0.55;cursor:default;"
@@ -168,7 +168,7 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px;">
           <a
             href="https://lumoki.app"
-            class="card"
+            class="card reveal"
             style="display:flex;flex-direction:column;gap:8px;color:inherit;"
           >
             <div class="card-kicker">{gettext("building now")}</div>
@@ -184,7 +184,7 @@
           </a>
           <a
             href="https://github.com/simaojunior/katu"
-            class="card"
+            class="card reveal"
             style="display:flex;flex-direction:column;gap:8px;color:inherit;"
           >
             <div class="card-kicker">{gettext("open source · Rust")}</div>
@@ -198,7 +198,7 @@
               <span class="tag tag-outline">Rust</span><span class="tag tag-outline">CLI</span>
             </div>
           </a>
-          <div class="card" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="card reveal" style="display:flex;flex-direction:column;gap:8px;">
             <div class="card-kicker">{gettext("private · SaaS")}</div>
             <div class="card-title">Traduzar</div>
             <div class="card-body">
@@ -210,7 +210,7 @@
               <span class="tag tag-outline">Phoenix</span><span class="tag tag-outline">Whisper</span>
             </div>
           </div>
-          <div class="card" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="card reveal" style="display:flex;flex-direction:column;gap:8px;">
             <div class="card-kicker">{gettext("private · side project")}</div>
             <div class="card-title">GrãoFin</div>
             <div class="card-body">
@@ -249,7 +249,10 @@
             {gettext("Three rules")}
           </h2>
           <div style="display:flex;flex-direction:column;gap:14px;">
-            <div style="border-left:2px solid var(--color-accent-700);padding-left:14px;">
+            <div
+              class="reveal"
+              style="border-left:2px solid var(--color-accent-700);padding-left:14px;"
+            >
               <div style="font-size:15px;color:var(--color-neutral-100);margin-bottom:3px;">
                 {gettext("Boring on purpose")}
               </div>
@@ -257,7 +260,10 @@
                 {gettext("The clever solution is the one you get paged about.")}
               </div>
             </div>
-            <div style="border-left:2px solid var(--color-accent-700);padding-left:14px;">
+            <div
+              class="reveal"
+              style="border-left:2px solid var(--color-accent-700);padding-left:14px;"
+            >
               <div style="font-size:15px;color:var(--color-neutral-100);margin-bottom:3px;">
                 {gettext("Teach it or you don't know it")}
               </div>
@@ -265,7 +271,10 @@
                 {gettext("Every post here started as an explanation I owed someone on my team.")}
               </div>
             </div>
-            <div style="border-left:2px solid var(--color-accent-700);padding-left:14px;">
+            <div
+              class="reveal"
+              style="border-left:2px solid var(--color-accent-700);padding-left:14px;"
+            >
               <div style="font-size:15px;color:var(--color-neutral-100);margin-bottom:3px;">
                 {gettext("Discipline Driven Development")}
               </div>
