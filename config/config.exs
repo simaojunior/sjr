@@ -17,7 +17,7 @@ config :sjr, SjrWeb.Endpoint,
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: SjrWeb.ErrorHTML, json: SjrWeb.ErrorJSON],
-    layout: false
+    layout: {SjrWeb.Layouts, :root}
   ],
   pubsub_server: Sjr.PubSub,
   live_view: [signing_salt: "dQwbahXE"]

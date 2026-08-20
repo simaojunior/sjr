@@ -18,7 +18,7 @@ msgstr ""
 msgid "%{rank} · %{minutes} min"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:337
+#: lib/sjr_web/controllers/page_html/home.html.heex:346
 #, elixir-autogen, elixir-format
 msgid "(third attempt) · learning Elixir · rewatching Shippuden for the arc where nothing happens"
 msgstr ""
@@ -54,7 +54,7 @@ msgid "ANY BROWSER"
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/cv.html.heex:275
-#: lib/sjr_web/controllers/page_html/home.html.heex:282
+#: lib/sjr_web/controllers/page_html/home.html.heex:291
 #, elixir-autogen, elixir-format
 msgid "Academy record"
 msgstr ""
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Attempting to reconnect"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:326
+#: lib/sjr_web/controllers/page_html/home.html.heex:335
 #, elixir-autogen, elixir-format
 msgid "B.Sc. Information Systems, Universidade Anhembi Morumbi"
 msgstr ""
@@ -81,36 +81,37 @@ msgid "BEST VIEWED"
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/cv.html.heex:167
-#: lib/sjr_web/controllers/page_html/home.html.heex:308
+#: lib/sjr_web/controllers/page_html/home.html.heex:317
 #, elixir-autogen, elixir-format
 msgid "Backend Engineer"
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/cv.html.heex:204
-#: lib/sjr_web/controllers/page_html/home.html.heex:317
+#: lib/sjr_web/controllers/page_html/home.html.heex:326
 #, elixir-autogen, elixir-format
 msgid "Backend Engineer (Junior)"
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/cv.html.heex:145
-#: lib/sjr_web/controllers/page_html/home.html.heex:299
+#: lib/sjr_web/controllers/page_html/home.html.heex:308
 #, elixir-autogen, elixir-format
 msgid "Backend Engineer (Mid III)"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:215
+#: lib/sjr_web/components/layouts.ex:217
+#: lib/sjr_web/controllers/error_html/404.html.heex:38
 #: lib/sjr_web/controllers/page_html/home.html.heex:44
 #: lib/sjr_web/controllers/page_html/home.html.heex:162
 #, elixir-autogen, elixir-format
 msgid "Bingo book"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:254
+#: lib/sjr_web/controllers/page_html/home.html.heex:257
 #, elixir-autogen, elixir-format
 msgid "Boring on purpose"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:273
+#: lib/sjr_web/controllers/page_html/home.html.heex:282
 #, elixir-autogen, elixir-format
 msgid "Consistency beats talent. Nothing here fell from the sky, it was earned commit by commit."
 msgstr ""
@@ -120,7 +121,7 @@ msgstr ""
 msgid "Caveo · backend (hybrid)"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:265
+#: lib/sjr_web/controllers/page_html/home.html.heex:271
 #, elixir-autogen, elixir-format
 msgid "Every post here started as an explanation I owed someone on my team."
 msgstr ""
@@ -155,7 +156,7 @@ msgstr ""
 msgid "NO BUILD STEP"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:270
+#: lib/sjr_web/controllers/page_html/home.html.heex:279
 #, elixir-autogen, elixir-format
 msgid "Discipline Driven Development"
 msgstr ""
@@ -170,12 +171,13 @@ msgstr ""
 msgid "Onboarding & KYC systems, LLM document classification, event-driven architecture"
 msgstr ""
 
+#: lib/sjr_web/controllers/error_html/404.html.heex:37
 #: lib/sjr_web/controllers/page_html/home.html.heex:43
 #, elixir-autogen, elixir-format
 msgid "Read the scrolls"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:335
+#: lib/sjr_web/controllers/page_html/home.html.heex:344
 #, elixir-autogen, elixir-format
 msgid "Reading"
 msgstr ""
@@ -192,7 +194,7 @@ msgid "Send a summon"
 msgstr ""
 
 #: lib/sjr_web/controllers/page_html/cv.html.heex:123
-#: lib/sjr_web/controllers/page_html/home.html.heex:290
+#: lib/sjr_web/controllers/page_html/home.html.heex:299
 #, elixir-autogen, elixir-format
 msgid "Senior Backend Engineer"
 msgstr ""
@@ -222,12 +224,12 @@ msgstr ""
 msgid "TEAM 7"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:262
+#: lib/sjr_web/controllers/page_html/home.html.heex:268
 #, elixir-autogen, elixir-format
 msgid "Teach it or you don't know it"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:257
+#: lib/sjr_web/controllers/page_html/home.html.heex:260
 #, elixir-autogen, elixir-format
 msgid "The clever solution is the one you get paged about."
 msgstr ""
@@ -242,7 +244,7 @@ msgstr ""
 msgid "Today I learned: small, quick notes that didn't earn a full scroll."
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:217
+#: lib/sjr_web/components/layouts.ex:219
 #: lib/sjr_web/controllers/page_controller.ex:21
 #, elixir-autogen, elixir-format
 msgid "Uses"
@@ -331,7 +333,7 @@ msgstr ""
 msgid "coming soon"
 msgstr ""
 
-#: lib/sjr_web/controllers/page_html/home.html.heex:332
+#: lib/sjr_web/controllers/page_html/home.html.heex:341
 #, elixir-autogen, elixir-format
 msgid "currently training"
 msgstr ""
@@ -366,12 +368,12 @@ msgstr ""
 msgid "konoha shinobi · reg. 012-607"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:196
+#: lib/sjr_web/components/layouts.ex:198
 #, elixir-autogen, elixir-format
 msgid "member of the"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:198
+#: lib/sjr_web/components/layouts.ex:200
 #, elixir-autogen, elixir-format
 msgid "next →"
 msgstr ""
@@ -387,7 +389,7 @@ msgstr ""
 msgid "ninja tool pouch"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:200
+#: lib/sjr_web/components/layouts.ex:202
 #, elixir-autogen, elixir-format
 msgid "no cookies, no trackers, no popups"
 msgstr ""
@@ -434,6 +436,7 @@ msgstr ""
 msgid "squad"
 msgstr ""
 
+#: lib/sjr_web/controllers/error_html/404.html.heex:51
 #: lib/sjr_web/controllers/page_html/cv.html.heex:68
 #: lib/sjr_web/controllers/page_html/home.html.heex:82
 #, elixir-autogen, elixir-format
@@ -451,17 +454,17 @@ msgstr ""
 msgid "village"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:189
+#: lib/sjr_web/components/layouts.ex:191
 #, elixir-autogen, elixir-format
 msgid "visitor count, persisted on a Fly volume"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:196
+#: lib/sjr_web/components/layouts.ex:198
 #, elixir-autogen, elixir-format
 msgid "webring"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:187
+#: lib/sjr_web/components/layouts.ex:189
 #, elixir-autogen, elixir-format
 msgid "you are shinobi no."
 msgstr ""
@@ -476,7 +479,7 @@ msgstr ""
 msgid "← all til"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:197
+#: lib/sjr_web/components/layouts.ex:199
 #, elixir-autogen, elixir-format
 msgid "← prev"
 msgstr ""
@@ -496,7 +499,7 @@ msgstr ""
 msgid "Elsewhere"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:57
+#: lib/sjr_web/components/layouts/root.html.heex:66
 #, elixir-autogen, elixir-format
 msgid "Skip to content"
 msgstr ""
@@ -556,7 +559,7 @@ msgstr ""
 msgid "Built backend services with Node.js, TypeScript, Koa.js, and PostgreSQL (TypeORM) on AWS (SNS, SQS, Cognito, S3)."
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:218
+#: lib/sjr_web/components/layouts.ex:220
 #: lib/sjr_web/controllers/page_controller.ex:25
 #, elixir-autogen, elixir-format
 msgid "CV"
@@ -754,67 +757,67 @@ msgstr ""
 msgid "webhooks"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:216
+#: lib/sjr_web/components/layouts.ex:218
 #, elixir-autogen, elixir-format
 msgid "About"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:75
+#: lib/sjr_web/components/layouts/root.html.heex:84
 #, elixir-autogen, elixir-format
 msgid "Command menu"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:87
+#: lib/sjr_web/components/layouts/root.html.heex:96
 #, elixir-autogen, elixir-format
 msgid "ESC to close"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:225
+#: lib/sjr_web/components/layouts.ex:227
 #, elixir-autogen, elixir-format
 msgid "Email"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:212
+#: lib/sjr_web/components/layouts.ex:214
 #, elixir-autogen, elixir-format
 msgid "Home"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:70
+#: lib/sjr_web/components/layouts/root.html.heex:79
 #, elixir-autogen, elixir-format
 msgid "Open command menu"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:72
+#: lib/sjr_web/components/layouts/root.html.heex:81
 #, elixir-autogen, elixir-format
 msgid "Press"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:213
+#: lib/sjr_web/components/layouts.ex:215
 #, elixir-autogen, elixir-format
 msgid "Scrolls"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:83
+#: lib/sjr_web/components/layouts/root.html.heex:92
 #, elixir-autogen, elixir-format
 msgid "Search"
 msgstr ""
 
-#: lib/sjr_web/components/layouts.ex:214
+#: lib/sjr_web/components/layouts.ex:216
 #, elixir-autogen, elixir-format
 msgid "TIL"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:80
+#: lib/sjr_web/components/layouts/root.html.heex:89
 #, elixir-autogen, elixir-format
 msgid "Type to search..."
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:88
+#: lib/sjr_web/components/layouts/root.html.heex:97
 #, elixir-autogen, elixir-format
 msgid "navigate"
 msgstr ""
 
-#: lib/sjr_web/components/layouts/root.html.heex:89
+#: lib/sjr_web/components/layouts/root.html.heex:98
 #, elixir-autogen, elixir-format
 msgid "open"
 msgstr ""
@@ -832,4 +835,69 @@ msgstr ""
 #: lib/sjr_web/controllers/page_html/home.html.heex:239
 #, elixir-autogen, elixir-format
 msgid "shugyō · the austere training"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:36
+#, elixir-autogen, elixir-format
+msgid "Back to the village"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:26
+#, elixir-autogen, elixir-format
+msgid "Either the mission never existed, or it is still sealed in the forbidden vault. Even the best trackers lose a trail sometimes."
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:9
+#, elixir-autogen, elixir-format
+msgid "MISSION FAILED · 404"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:32
+#, elixir-autogen, elixir-format
+msgid "Nothing to report here. Try the archive, or head back to the village."
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:22
+#, elixir-autogen, elixir-format
+msgid "This scroll was never filed."
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:70
+#, elixir-autogen, elixir-format
+msgid "a shinobi who loses the path still trains. 修行"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:44
+#, elixir-autogen, elixir-format
+msgid "mission report"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:63
+#, elixir-autogen, elixir-format
+msgid "next move"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:54
+#, elixir-autogen, elixir-format
+msgid "not found"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:66
+#, elixir-autogen, elixir-format
+msgid "regroup · pick another mission"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:17
+#, elixir-autogen, elixir-format
+msgid "scroll not in the archive"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "target"
+msgstr ""
+
+#: lib/sjr_web/controllers/error_html/404.html.heex:60
+#, elixir-autogen, elixir-format
+msgid "unknown · presumed rogue"
 msgstr ""
