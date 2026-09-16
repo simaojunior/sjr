@@ -43,3 +43,9 @@ npm-debug.log
 # OS junk
 .DS_Store
 
+# Personal CV files (contain phone/email, kept out of the public repo)
+/priv/static/files/*.pdf
+
+# Claude Code local session state
+/.claude/
+
