@@ -5,6 +5,11 @@
 <h1 align="center">simaojunior.dev</h1>
 
 <p align="center">
+  <strong>Archived.</strong> This is an old version of my personal site. It is
+  no longer live at simaojunior.dev; the code is kept here for reference.
+</p>
+
+<p align="center">
   Personal website and blog, built with
   <a href="https://www.phoenixframework.org/">Phoenix</a> and
   <a href="https://github.com/dashbitco/nimble_publisher">NimblePublisher</a>.
